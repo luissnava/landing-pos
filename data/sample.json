@@ -1,0 +1,113 @@
+[
+    {
+        "name": "Prueba Gratis",
+        "price": 0.00,
+        "billing_cycle": 3,
+        "features": {
+            "users": true,
+            "mesas": true,
+            "products": true,
+            "tickets": true,
+            "orders": true
+        },
+        "limits": {
+            "licences": 1,
+            "users": 1,
+            "mesas": 5,
+            "products": 10
+        },
+        "active": true
+    },
+    {
+        "name": "Plan Inicial",
+        "price": 980,
+        "billing_cycle": 1,
+        "features": {
+            "users": true,
+            "mesas": true,
+            "products": true,
+            "tickets": true,
+            "orders": true,
+            "reports": true,
+            "soporte": true
+        },
+        "limits": {
+            "licences": 1,
+            "users": 2,
+            "mesas": 10,
+            "products": 20, 
+            "reports": "tickets",
+            "soporte": "email"
+        },
+        "active": true
+    },
+    {
+        "name": "Plan Inicial",
+        "price": 9980,
+        "billing_cycle": 2,
+        "features": {
+            "users": true,
+            "mesas": true,
+            "products": true,
+            "tickets": true,
+            "orders": true,
+            "reports": true,
+            "soporte": true
+        },
+        "limits": {
+            "licences": 1,
+            "users": 2,
+            "mesas": 10,
+            "products": 20,
+            "reports": "tickets",
+            "soporte": "email"
+        },
+        "active": true
+    },
+    {
+        "name": "Plan Básico",
+        "price": 1580,
+        "billing_cycle": 1,
+        "features": {
+            "users": true,
+            "mesas": true,
+            "products": true,
+            "tickets": true,
+            "orders": true,
+            "reports": true,
+            "soporte": true
+        },
+        "limits": {
+            "licences": 1,
+            "users": 5,
+            "mesas": 20,
+            "products": 50,
+            "reports": "tickets",
+            "soporte": "whatsapp"
+        },
+        "active": true
+    },
+    {
+        "name": "Plan Básico",
+        "price": 15980,
+        "billing_cycle": 2,
+        "features": {
+            "users": true,
+            "mesas": true,
+            "menu": true,
+            "tickets": true,
+            "reports": true,
+            "soporte": true,
+            "products": true
+        },
+        "limits": {
+            "licences": 1,
+            "users": 5,
+            "mesas": 20,
+            "products": 50,
+            "reports": "tickets",
+            "soporte": "whatsapp"
+        },
+        "active": true
+    }
+]

@@ -1,0 +1,146 @@
+{
+  "hero": {
+    "title": "Sistema POS para Restaurantes",
+    "subtitle": "Gestiona tu restaurante de manera profesional con nuestro sistema punto de venta diseñado específicamente para el sector gastronómico",
+    "cta": "Contactar por WhatsApp",
+    "whatsappNumber": "5215512345678"
+  },
+  "features": [
+    {
+      "id": 1,
+      "title": "Gestión de Mesas",
+      "description": "Administra las mesas de tu restaurante de forma visual e intuitiva. Asigna órdenes, controla tiempos y optimiza el servicio.",
+      "icon": "🍽️"
+    },
+    {
+      "id": 2,
+      "title": "Control de Órdenes",
+      "description": "Sistema completo para tomar y gestionar órdenes en tiempo real. Comunicación directa entre meseros y cocina.",
+      "icon": "📋"
+    },
+    {
+      "id": 3,
+      "title": "Reportes y Análisis",
+      "description": "Obtén reportes detallados de ventas, productos más vendidos y rendimiento de tu negocio para tomar mejores decisiones.",
+      "icon": "📊"
+    },
+    {
+      "id": 4,
+      "title": "Menú Digital",
+      "description": "Crea y actualiza tu menú fácilmente con categorías, precios y descripciones. Cambios en tiempo real.",
+      "icon": "📱"
+    }
+  ],
+  "plans": [
+    {
+      "id": "trial",
+      "name": "Prueba Gratis",
+      "badge": "🎁",
+      "price": null,
+      "priceMXN": null,
+      "period": "",
+      "description": "Prueba el sistema sin compromiso",
+      "features": [
+        "7 días gratis",
+        "Hasta 5 mesas",
+        "1 usuario",
+        "Menú hasta 10 productos",
+        "Tickets",
+        "Sin tarjeta de crédito"
+      ],
+      "notIncluded": [
+        "Datos se conservan si contratas después",
+        "Al finalizar, elige un plan o datos se eliminan en 7 días"
+      ],
+      "popular": false,
+      "isTrial": true
+    },
+    {
+      "id": "inicial",
+      "name": "Plan Inicial",
+      "badge": "🥉",
+      "price": "$49 USD",
+      "priceMXN": "$980 MXN",
+      "period": "/mes",
+      "annualPrice": "$499 USD/año",
+      "annualPriceMXN": "$9,980 MXN/año",
+      "annualDiscount": "15% descuento",
+      "description": "Ideal para negocios muy pequeños o food trucks",
+      "features": [
+        "Hasta 10 mesas",
+        "2 usuarios (meseros)",
+        "Menú hasta 20 productos",
+        "Tickets",
+        "Reportes básicos (corte diario)",
+        "Soporte por email"
+      ],
+      "notIncluded": [
+        "Sin backup",
+        "Sin vista de cocina",
+        "Sin personalización de marca",
+        "Sin reportes avanzados"
+      ],
+      "popular": false
+    },
+    
+    {
+      "id": "basico",
+      "name": "Plan Básico",
+      "badge": "🥉",
+      "price": "$79 USD",
+      "priceMXN": "$1,580 MXN",
+      "period": "/mes",
+      "annualPrice": "$799 USD/año",
+      "annualPriceMXN": "$15,980 MXN/año",
+      "annualDiscount": "15% descuento",
+      "description": "Ideal para pequeños restaurantes",
+      "features": [
+        "Hasta 20 mesas",
+        "5 usuarios (meseros)",
+        "Menú hasta 50 productos",
+        "Tickets",
+        "Reportes (Excel)",
+        "Soporte por Whatsapp"
+      ],
+      "notIncluded": [
+        "Sin vista de cocina",
+        "Sin backup",
+        "Sin personalización de marca",
+        "Sin reportes avanzados"
+      ],
+      "popular": true
+    }
+  ],
+  "benefits": [
+    {
+      "id": 1,
+      "title": "Fácil de Usar",
+      "description": "Interfaz intuitiva que tu equipo aprenderá en minutos. No requiere capacitación extensa.",
+      "icon": "✨"
+    },
+    {
+      "id": 2,
+      "title": "Soporte en Español",
+      "description": "Equipo de soporte disponible en tu idioma para resolver cualquier duda o problema.",
+      "icon": "🇲🇽"
+    },
+    {
+      "id": 3,
+      "title": "Actualizaciones Constantes",
+      "description": "Mejoras continuas y nuevas funcionalidades sin costo adicional.",
+      "icon": "🚀"
+    },
+    {
+      "id": 4,
+      "title": "Seguridad Garantizada",
+      "description": "Tus datos protegidos con los más altos estándares de seguridad.",
+      "icon": "🔒"
+    }
+  ],
+  "contact": {
+    "title": "¿Listo para transformar tu restaurante?",
+    "subtitle": "Contáctanos por WhatsApp y te ayudaremos a elegir el plan perfecto para tu negocio",
+    "whatsappNumber": "5215512345678",
+    "whatsappMessage": "Hola, me interesa conocer más sobre el sistema POS para restaurantes"
+  }
+}
