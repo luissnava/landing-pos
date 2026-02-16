@@ -23,8 +23,8 @@ export async function submitData(formData: {
   };
 
   const selectedPlan = planMapping[formData.planId];
-  const plan_ulid = selectedPlan 
-    ? selectedPlan[formData.period] 
+  const plan_ulid = selectedPlan
+    ? selectedPlan[formData.period]
     : process.env.PLAN_TRIAL;
 
   const payload = {
@@ -35,8 +35,11 @@ export async function submitData(formData: {
     ...(formData.businessName && { legal_name: formData.businessName })
   };
 
+  console.log("payload", payload);
 
-  try {    
+
+
+  try {
     const response = await fetch(process.env.BACKEND_URL, {
       method: 'POST',
       headers: {
@@ -46,16 +49,41 @@ export async function submitData(formData: {
       body: JSON.stringify(payload),
     });
 
+
     if (!response.ok) {
+      console.log(response);
+      const dataError = await response.json()
+      console.log(dataError);
+      
       throw new Error('Error al enviar la solicitud');
     }
-
-    console.log("Respuesta Backend ", response);
 
 
     return { success: true, data: await response.json() };
   } catch (error) {
-
     return { success: false, error: error };
+  }
+}
+
+export async function notifyPaymentSuccess(sessionId: string) {
+  try {
+    const response = await fetch(process.env.WEBHOOK_URL!, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'checkout.session.completed',
+        data: { object: { id: sessionId } }
+      })
+    });
+
+    if (!response.ok) console.log(response);
+
+    const data = await response.json()
+
+    console.log(data);
+
+    return { success: true };
+  } catch (error) {
+    return { success: false, error };
   }
 }

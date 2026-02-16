@@ -6,5 +6,6 @@ declare namespace NodeJS {
     PLAN_INICIAL_ANUAL: string;
     PLAN_BASICO_MENSUAL: string;
     PLAN_BASICO_ANUAL: string;
+    WEBHOOK_URL: string
   }
 }

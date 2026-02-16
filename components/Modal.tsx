@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { submitData } from '@/app/actions/useFetch';
 
 interface PlansModalProps {
@@ -17,6 +18,7 @@ interface PlansModalProps {
 }
 
 export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModalProps) {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -44,19 +46,17 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Combinar formData con los datos del plan
         const submitFormData = {
             ...formData,
             planId: selectedPlan?.id || '',
             plan: selectedPlan?.name || ''
         };
         
-
         const result = await submitData(submitFormData);
 
-        if (result.success) {
-            console.log(result);
-            
+        if (result.success && result.data?.data?.checkout_url) {
+            router.push(result.data.data.checkout_url);
+        } else if (result.success) {
             onClose();
             setFormData({ name: '', email: '', businessName: '', phone_number: '', rfc: '', period: 'monthly' });
         }
