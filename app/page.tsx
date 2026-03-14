@@ -1,11 +1,11 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import Plans from '@/components/Plans';
-import Benefits from '@/components/Benefits';
-import Contact from '@/components/Contact';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import landingData from '@/data/landing-data.json';
+import Navbar from '@/app/components/Navbar';
+import Hero from '@/app/components/Hero';
+import Features from '@/app/components/Features';
+import Plans from '@/app/components/Plans';
+import Benefits from '@/app/components/Benefits';
+import Contact from '@/app/components/Contact';
+import WhatsAppButton from '@/app/components/WhatsAppButton';
+import landingData from '@/app/data/landing-data.json';
 
 export default function Home() {
   return (
