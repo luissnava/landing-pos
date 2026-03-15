@@ -76,7 +76,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                 <button
                     type="button"
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-900 transition-colors"
+                    className="absolute top-4 right-4 text-neutral-400 hover:text-orange-500 transition-colors"
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -102,8 +102,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent"
-                                placeholder="Juan Pérez"
+                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             />
                         </div>
 
@@ -117,8 +116,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent"
-                                placeholder="juan@ejemplo.com"
+                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             />
                         </div>
 
@@ -132,8 +130,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                                 value={formData.businessName}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent"
-                                placeholder="Restaurante El Buen Sabor"
+                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             />
                         </div>
 
@@ -147,8 +144,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                                 value={formData.phone_number}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent text-neutral-900"
-                                placeholder="+52 123 456 7890"
+                                className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-neutral-900"
                             />
                         </div>
 
@@ -163,7 +159,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                                         name="period"
                                         value={formData.period}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent text-neutral-900"
+                                        className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-neutral-900"
                                     >
                                         <option value="monthly">Mensual - {selectedPlan?.priceMXN || 'N/A'}</option>
                                         <option value="annual">Anual - {selectedPlan?.annualPriceMXN || 'N/A'}</option>
@@ -177,7 +173,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
 
                         <button
                             type="submit"
-                            className="w-full bg-neutral-900 hover:bg-neutral-800 text-white font-medium py-3 rounded-lg transition-colors duration-200"
+                            className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 rounded-lg transition-colors duration-200"
                         >
                             {isTrial ? 'Comenzar prueba gratis' : 'Contratar'}
                         </button>

@@ -19,7 +19,7 @@ export default function Home() {
       <WhatsAppButton phoneNumber={landingData.hero.whatsappNumber} />
       <footer className="bg-neutral-900 text-neutral-400 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 OrderFlow. Todos los derechos reservados.</p>
+          <p>&copy; 2024 <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">OrderFlow</span>. Todos los derechos reservados.</p>
         </div>
       </footer>
     </main>

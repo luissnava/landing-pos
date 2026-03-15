@@ -1,6 +1,23 @@
-1.- Subir landing Page y poner imagens del pos en la landig
-2.- hacer debug completo con flujos
-3.- Corregir detalles en filtros de categoria
-4.- corregir detalle de actualziar lista de users y de productos para que se actualice la lista cuando se borren
-5.- Debug de errores de stripe
-6.- subir a dev para pruebas en entorno de Vercel y Render
+
+<!-- SYSTEM-POS  -->
+1.- Subir landing page
+2.- hacer pruebas de landing
+3.- Hacer el modulo de Juridico
+4.- Hacer pruebas de pago con stripe en prod
+5.- Hacer el correo empresarial
+6.- Abrir cuentas de redes sociales, Instagram, Tiktok
+
+7.- SUBIR PROMOCIONES DEL SISTEMA 
+
+
+<!-- Segunda Etapa  -->
+8.-Optimizar versione stable para integrar comanda y mejorar el frontend de proxy a actions servers
+9.- Crear Modulo de AdminPanel para superUser ocea root y sudo
+
+
+
+
+
+<!-- FACTURACIÓN  -->
+
+1.- levantar proyectos para facturacion

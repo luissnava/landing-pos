@@ -47,11 +47,11 @@ export default function Plans({ data, whatsappNumber }: PlansProps) {
             {data.map((plan) => (
               <div
                 key={plan.id}
-                className={`relative bg-white rounded-lg border transition-all duration-200 p-6 ${plan.popular ? 'border-neutral-900 shadow-lg' : 'border-neutral-200 hover:border-neutral-400'
+                className={`relative bg-white rounded-lg border transition-all duration-200 p-6 ${plan.popular ? 'border-orange-500 shadow-lg' : 'border-neutral-200 hover:border-orange-400'
                   } ${plan.isTrial ? 'from-neutral-50 to-white' : ''}`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-neutral-900 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-medium">
                     Más Popular
                   </div>
                 )}
@@ -86,7 +86,7 @@ export default function Plans({ data, whatsappNumber }: PlansProps) {
                 <ul className="space-y-2 mb-6">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-start text-sm">
-                      <span className="text-neutral-900 mr-2 mt-0.5">✓</span>
+                      <span className="text-orange-500 mr-2 mt-0.5">✓</span>
                       <span className="text-neutral-700">{feature}</span>
                     </li>
                   ))}
@@ -99,7 +99,7 @@ export default function Plans({ data, whatsappNumber }: PlansProps) {
                 </ul>
                 <button
                   onClick={() => setSelectedPlan(plan)}
-                  className="w-full bg-neutral-900 hover:bg-neutral-800 text-white font-medium py-2.5 rounded-lg transition-all duration-200 text-sm"
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-2.5 rounded-lg transition-all duration-200 text-sm"
                 >
                   {plan.isTrial ? 'Comenzar prueba' : plan.price ? 'Contratar Plan' : 'Contactar'}
                 </button>

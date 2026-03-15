@@ -22,7 +22,7 @@ export default function Benefits({ data }: BenefitsProps) {
           {data.map((benefit) => (
             <div
               key={benefit.id}
-              className="text-center p-6 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-neutral-400 transition-all duration-200"
+              className="text-center p-6 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-orange-400 transition-all duration-200"
             >
               <div className="text-4xl mb-4">{benefit.icon}</div>
               <h3 className="text-lg font-bold text-neutral-900 mb-2">

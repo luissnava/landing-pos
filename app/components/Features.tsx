@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+import adminImg from '@/app/assets/images/admin.png';
 
 interface Feature {
   id: number;
@@ -27,10 +29,10 @@ export default function Features({ data }: FeaturesProps) {
           {data.map((feature) => (
             <div
               key={feature.id}
-              className="p-8 bg-white rounded-lg border border-neutral-200 hover:border-neutral-400 transition-all duration-200"
+              className="p-8 bg-white rounded-lg border border-neutral-200 hover:border-orange-400 transition-all duration-200"
             >
               <div className="flex gap-6 mb-4">
-                <div className="flex-shrink-0 w-14 h-14 bg-neutral-100 rounded-lg flex items-center justify-center text-3xl">
+                <div className="flex-shrink-0 w-14 h-14 bg-orange-50 rounded-lg flex items-center justify-center text-3xl">
                   {feature.icon}
                 </div>
                 <div>
@@ -42,6 +44,10 @@ export default function Features({ data }: FeaturesProps) {
               <p className="text-neutral-600 leading-relaxed">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 rounded-xl overflow-hidden shadow-2xl">
+          <Image src={adminImg} alt="Panel de Administración" className="w-full h-auto" />
         </div>
       </div>
     </section>
