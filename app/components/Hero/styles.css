@@ -4,9 +4,10 @@
   overflow: hidden;
 }
 .hero-bg {
-  position: absolute; inset: -25%;
-  background: #e8e4de;
-  filter: brightness(.25) saturate(.5) blur(1px);
+  position: absolute; inset: 0;
+  background: url('/admin-bg.png') center top/100% auto no-repeat;
+  filter: brightness(.15) saturate(.3) blur(2px);
+  will-change: transform;
 }
 .hero-vignette {
   position: absolute; inset: 0;
@@ -49,8 +50,8 @@
   background-clip: text; display: block;
 }
 .hero-p {
-  font-size: .95rem; line-height: 1.85; color: var(--fog);
-  max-width: 480px; margin: 0 auto 48px; font-weight: 300;
+  font-size: .95rem; line-height: 1.85; color: #e1dcd9;
+  max-width: 480px; margin: 0 auto 48px; font-weight: 500;
   opacity: 0; transform: translateY(12px);
   animation: up .7s .65s forwards;
 }

@@ -23,9 +23,10 @@ export default function Navbar() {
         <li><Link href="#como">Cómo funciona</Link></li>
         <li><Link href="#precios">Precios</Link></li>
         <li><Link href="#faq">FAQ</Link></li>
+        <li><Link href="/legal">Legal</Link></li>
       </ul>
       <div className="nav-right">
-        <Link href="#" className="btn-ng">Iniciar sesión</Link>
+        {/* <Link href="#" className="btn-ng">Iniciar sesión</Link> */}
         <Link href="#precios" className="btn-nc">Prueba gratuita</Link>
       </div>
     </nav>

@@ -14,9 +14,9 @@
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0; transition: all .3s;
 }
-.fi-ico svg { width: 10px; height: 10px; stroke: var(--fog); fill: none; stroke-width: 2; transition: transform .3s; }
+.fi-ico svg { width: 14px; height: 14px; stroke: var(--fog); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s; }
 .fi.open .fi-ico { border-color: rgba(249,115,22,.4); background: rgba(249,115,22,.08); }
-.fi.open .fi-ico svg { stroke: #E85520; transform: rotate(45deg); }
+.fi.open .fi-ico svg { stroke: #E85520; transform: rotate(180deg); }
 .fi-a {
   font-size: .8rem; color: var(--fog); line-height: 1.85;
   max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .4s;

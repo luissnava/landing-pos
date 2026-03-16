@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitData } from '@/app/actions/useFetch';
+import './styles.css';
 
 interface PlansModalProps {
     isOpen: boolean;
@@ -19,6 +20,7 @@ interface PlansModalProps {
 
 export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModalProps) {
     const router = useRouter();
+    const [acceptedTerms, setAcceptedTerms] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -54,6 +56,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
             router.push(result.data.data.checkout_url);
         } else if (result.success) {
             onClose();
+            setAcceptedTerms(false);
             setFormData({ name: '', email: '', businessName: '', phone_number: '', rfc: '', period: 'monthly' });
         }
     };
@@ -63,51 +66,54 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div className="relative bg-white rounded-lg w-full max-w-md m-4 shadow-xl">
-                <button type="button" onClick={onClose} className="absolute top-4 right-4 text-neutral-400 hover:text-orange-500 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="modal-overlay">
+            <div className="modal-container">
+                <button type="button" onClick={onClose} className="modal-close">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
-                <div className="p-8">
-                    <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+                <div className="modal-body">
+                    <h3 className="modal-title">
                         {isTrial ? 'Comienza tu prueba gratis' : 'Contratar Plan'}
                     </h3>
-                    <p className="text-sm text-neutral-600 mb-6">
+                    <p className="modal-subtitle">
                         {isTrial ? '7 días sin compromiso. Sin tarjeta de crédito.' : 'Completa el formulario para contratar tu plan.'}
                     </p>
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <div>
-                            <label className="block text-sm font-medium text-neutral-700 mb-1">Nombre completo <span className="text-red-500">*</span></label>
-                            <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" />
+                    <form onSubmit={handleSubmit} className="modal-form">
+                        <div className="modal-field">
+                            <label>Nombre completo <span>*</span></label>
+                            <input type="text" name="name" value={formData.name} onChange={handleChange} required className="modal-input" />
                         </div>
-                        <div>
-                            <label className="block text-sm font-medium text-neutral-700 mb-1">Correo electrónico <span className="text-red-500">*</span></label>
-                            <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" />
+                        <div className="modal-field">
+                            <label>Correo electrónico <span>*</span></label>
+                            <input type="email" name="email" value={formData.email} onChange={handleChange} required className="modal-input" />
                         </div>
-                        <div>
-                            <label className="block text-sm font-medium text-neutral-700 mb-1">Nombre del restaurante <span className="text-red-500">*</span></label>
-                            <input type="text" name="businessName" value={formData.businessName} onChange={handleChange} required className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" />
+                        <div className="modal-field">
+                            <label>Nombre del restaurante <span>*</span></label>
+                            <input type="text" name="businessName" value={formData.businessName} onChange={handleChange} required className="modal-input" />
                         </div>
-                        <div>
-                            <label className="block text-sm font-medium text-neutral-700 mb-1">Teléfono <span className="text-red-500">*</span></label>
-                            <input type="tel" name="phone_number" value={formData.phone_number} onChange={handleChange} required className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-neutral-900" />
+                        <div className="modal-field">
+                            <label>Teléfono <span>*</span></label>
+                            <input type="tel" name="phone_number" value={formData.phone_number} onChange={handleChange} required className="modal-input" />
                         </div>
                         {!isTrial && (
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-700 mb-1">Período de pago <span className="text-red-500">*</span></label>
-                                <select name="period" value={formData.period} onChange={handleChange} className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-neutral-900">
+                            <div className="modal-field">
+                                <label>Período de pago <span>*</span></label>
+                                <select name="period" value={formData.period} onChange={handleChange} className="modal-input">
                                     <option value="monthly">Mensual - {selectedPlan?.priceMXN || 'N/A'}</option>
                                     <option value="annual">Anual - {selectedPlan?.annualPriceMXN || 'N/A'}</option>
                                 </select>
-                                <p className="text-sm text-neutral-600 mt-2">Total: <span className="font-semibold">${displayCost.toLocaleString('es-MX')} MXN</span></p>
+                                <p className="modal-total">Total: <span>${displayCost.toLocaleString('es-MX')} MXN</span></p>
                             </div>
                         )}
-                        <button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 rounded-lg transition-colors duration-200">
+                        <label className="modal-terms">
+                            <input type="checkbox" checked={acceptedTerms} onChange={(e) => setAcceptedTerms(e.target.checked)} />
+                            <span>Acepto los <a href="/legal?tab=terminos" target="_blank" rel="noreferrer">Términos y Condiciones</a> y el <a href="/legal?tab=aviso" target="_blank" rel="noreferrer">Aviso de Privacidad</a></span>
+                        </label>
+                        <button type="submit" className="modal-submit" disabled={!acceptedTerms}>
                             {isTrial ? 'Comenzar prueba gratis' : 'Contratar'}
                         </button>
-                        <p className="text-xs text-neutral-500 text-center">Al registrarte, aceptas nuestros términos de servicio y política de privacidad.</p>
                     </form>
                 </div>
             </div>

@@ -9,3 +9,4 @@ export { default as Benefits } from './Benefits';
 export { default as FAQ } from './FAQ';
 export { default as WhatsAppButton } from './WhatsAppButton';
 export { default as PlansModal } from './Modal';
+export { default as Footer } from './Footer';

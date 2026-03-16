@@ -1,0 +1,52 @@
+import Link from 'next/link';
+import './styles.css';
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-wrap">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <Link href="/" className="footer-logo">
+              <div className="footer-logo-mark">O</div>
+              ORION
+            </Link>
+            <p className="footer-desc">Sistema punto de venta diseñado para restaurantes. Gestione mesas, comandas y ventas desde un solo lugar.</p>
+          </div>
+
+          <div className="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+              <li><Link href="/#funciones">Funciones</Link></li>
+              <li><Link href="/#como">Cómo funciona</Link></li>
+              <li><Link href="/#precios">Precios</Link></li>
+              <li><Link href="/#faq">FAQ</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Producto</h4>
+            <ul>
+              <li><Link href="/#precios">Prueba gratuita</Link></li>
+              <li><Link href="/#funciones">Gestión de Mesas</Link></li>
+              <li><Link href="/#funciones">Comandas Digitales</Link></li>
+              <li><Link href="/#funciones">Reportes de Ventas</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><Link href="/legal?tab=aviso">Aviso de Privacidad</Link></li>
+              <li><Link href="/legal?tab=terminos">Términos de Uso</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <span>© 2025 <span className="footer-gradient">ORION POS</span> — Todos los derechos reservados</span>
+        </div>
+      </div>
+    </footer>
+  );
+}

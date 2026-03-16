@@ -4,11 +4,11 @@ import './styles.css';
 
 const features = [
   { num: '01', title: 'Gestión de Mesas', desc: 'Mapa visual interactivo de su restaurante. Asigne órdenes, transfiera comensales y monitoree la ocupación en tiempo real.', icon: <><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></> },
-  { num: '02', title: 'Comandas Digitales', desc: 'Las órdenes se envían directo a cocina al instante. Pantalla KDS incluida. Cero errores de captura.', icon: <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/> },
-  { num: '03', title: 'Control de Inventario', desc: 'Alertas de stock mínimo, costeo de recetas y control de mermas. Sincronización automática con cada venta.', icon: <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/> },
-  { num: '04', title: 'Delivery Integrado', desc: 'Reciba pedidos de Rappi, Uber Eats y DiDi Food en un solo lugar. Gestión centralizada.', icon: <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/> },
-  { num: '05', title: 'Reportes Ejecutivos', desc: 'Dashboard con ventas, ticket promedio, rendimiento por platillo y comparativas semanales.', icon: <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/> },
-  { num: '06', title: 'Pagos y Facturación SAT', desc: 'Efectivo, tarjeta, QR y transferencias. Timbrado CFDI 4.0 automático. 100% cumplimiento fiscal.', icon: <path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/> },
+  { num: '02', title: 'Comandas Digitales', desc: 'Las órdenes se envían directo a cocina al instante.', icon: <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/> },
+  { num: '03', title: 'Menú Digital', desc: 'Actualice platillos, precios y disponibilidad al instante desde cualquier dispositivo.', icon: <path d="M4 6h16M4 12h16M4 18h12"/> },
+  { num: '04', title: 'Vista de Cocina', desc: 'Pantalla dedicada para cocina con las órdenes en tiempo real. Sin papeles, sin confusiones.', icon: <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/> },
+  { num: '05', title: 'Reportes de Ventas', desc: 'Dashboard con ventas, ticket promedio, rendimiento por platillo y comparativas semanales.', icon: <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/> },
+  { num: '06', title: 'Tickets y Reportes', desc: 'Genera tickets de venta al instante y consulta reportes diarios para controlar tu negocio.', icon: <path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/> },
 ];
 
 export default function Features() {

@@ -27,8 +27,8 @@ export default function Plans({ data, whatsappNumber }: { data: Plan[]; whatsapp
       <section className="pricing-s" id="precios" ref={ref}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div className="pricing-head">
-            <p className="tag rv" style={{ justifyContent: 'center' }}>Membresías y precios</p>
-            <h2 className="h2 rv" style={{ marginTop: 8 }}>Elige la membresía <em>ideal</em><br/>para tu negocio</h2>
+            <p className="tag rv" style={{ justifyContent: 'center' }}>Planes y precios</p>
+            <h2 className="h2 rv" style={{ marginTop: 8 }}>Elige el plan <em>ideal</em><br/>para tu negocio</h2>
             <p className="sub rv" style={{ margin: '16px auto 0', textAlign: 'center' }}>Sin comisiones ocultas. Sin permanencia forzada. Cancela cuando quieras.</p>
             <div className="billing-tog rv">
               <span className={`bt-label ${!annual ? 'on' : ''}`}>Facturación mensual</span>

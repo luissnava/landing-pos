@@ -4,8 +4,9 @@
 }
 .pb-bg {
   position: absolute; inset: -25%;
-  background: #2C2420;
+  background: url('/hero-bg.png') center/cover no-repeat;
   filter: brightness(.18) saturate(.4);
+  will-change: transform;
 }
 .pb-grad {
   position: absolute; inset: 0;
