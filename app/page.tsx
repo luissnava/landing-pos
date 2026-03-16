@@ -1,25 +1,26 @@
-import Navbar from '@/app/components/Navbar';
-import Hero from '@/app/components/Hero';
-import Features from '@/app/components/Features';
-import Plans from '@/app/components/Plans';
-import Benefits from '@/app/components/Benefits';
-import Contact from '@/app/components/Contact';
-import WhatsAppButton from '@/app/components/WhatsAppButton';
+import { Navbar, Hero, Strip, Features, Plans, Testimonials, Contact, Benefits, FAQ, WhatsAppButton } from '@/app/components';
 import landingData from '@/app/data/landing-data.json';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       <Navbar />
       <Hero data={landingData.hero} />
-      <Features data={landingData.features} />
+      <Strip />
+      <Features />
       <Plans data={landingData.plans} whatsappNumber={landingData.hero.whatsappNumber} />
-      <Benefits data={landingData.benefits} />
+      <Testimonials />
       <Contact data={landingData.contact} />
+      <Benefits />
+      <FAQ whatsappNumber={landingData.hero.whatsappNumber} />
       <WhatsAppButton phoneNumber={landingData.hero.whatsappNumber} />
-      <footer className="bg-neutral-900 text-neutral-400 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">OrderFlow</span>. Todos los derechos reservados.</p>
+      <footer style={{ background: '#1A1210', borderTop: '1px solid rgba(255,255,255,.07)', padding: '36px 72px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, fontSize: '.7rem', color: '#9A938C' }}>
+          <span>© 2025 <span style={{ background: 'linear-gradient(to right,#F97316,#EF4444)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ORION POS</span> — Todos los derechos reservados</span>
+          <div style={{ display: 'flex', gap: 24 }}>
+            <a href="#" style={{ color: '#9A938C', textDecoration: 'none' }}>Aviso de Privacidad</a>
+            <a href="#" style={{ color: '#9A938C', textDecoration: 'none' }}>Términos de Uso</a>
+          </div>
         </div>
       </footer>
     </main>

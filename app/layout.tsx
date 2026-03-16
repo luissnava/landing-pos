@@ -1,40 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "OrderFlow - Sistema POS para Restaurantes | Gestión Profesional de Mesas y Órdenes",
-  description: "OrderFlow: Sistema punto de venta diseñado para restaurantes. Gestiona mesas, órdenes, menú digital y reportes. Planes desde $29 USD/mes. Soporte en español.",
-  keywords: ["OrderFlow", "POS restaurante", "sistema punto de venta", "gestión restaurante", "software restaurante", "POS México", "sistema mesas", "órdenes restaurante"],
-  authors: [{ name: "OrderFlow" }],
+  title: "ORION POS — Sistema de Punto de Venta para Restaurantes",
+  description: "ORION POS: Sistema punto de venta diseñado para restaurantes. Gestiona mesas, órdenes, menú digital y reportes. Planes desde $49 USD/mes. Soporte en español.",
+  keywords: ["ORION POS", "POS restaurante", "sistema punto de venta", "gestión restaurante", "software restaurante", "POS México", "sistema mesas", "órdenes restaurante"],
+  authors: [{ name: "ORION POS" }],
   openGraph: {
-    title: "OrderFlow - Sistema POS para Restaurantes | Gestión Profesional",
-    description: "Gestiona tu restaurante de manera profesional con OrderFlow. Planes desde $29 USD/mes.",
+    title: "ORION POS — Sistema de Punto de Venta para Restaurantes",
+    description: "Gestiona tu restaurante de manera profesional con ORION POS.",
     type: "website",
     locale: "es_MX",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "OrderFlow - Sistema POS para Restaurantes",
-    description: "Sistema punto de venta profesional para restaurantes. Gestión de mesas, órdenes y reportes.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: "https://tudominio.com",
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -44,9 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-MX">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

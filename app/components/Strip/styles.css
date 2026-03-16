@@ -1,0 +1,22 @@
+.strip {
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  background: var(--ink2); padding: 0 72px;
+  display: flex; align-items: center; gap: 0; overflow: hidden;
+}
+.strip-label {
+  font-size: .6rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--fog2); white-space: nowrap; padding: 24px 40px 24px 0;
+  border-right: 1px solid var(--rule); margin-right: 40px; flex-shrink: 0;
+}
+.marquee-wrap { overflow: hidden; flex: 1; }
+.marquee-track {
+  display: flex; gap: 64px; width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.mitem {
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--fog2); white-space: nowrap; padding: 24px 0;
+  transition: color .3s;
+}
+.mitem:hover { color: #1A1210; }
+@media(max-width:768px) { .strip { padding: 0 24px; } }

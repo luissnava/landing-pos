@@ -1,40 +1,32 @@
 @import "tailwindcss";
 
-
-
-body {
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --ink: #FFFFFF;
+  --ink2: #F7F5F2;
+  --rule: rgba(0,0,0,.07);
+  --rule2: rgba(0,0,0,.12);
+  --fog: #6B6560;
+  --fog2: #9A938C;
+  --smoke: #2C2420;
+  --white: #1A1210;
+  --steel: #D8D2CA;
+  --grad: linear-gradient(to right, #F97316, #EF4444);
+  --grad-h: linear-gradient(to right, #EA6C10, #DC3535);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--ink);color:var(--white);overflow-x:hidden}
+::selection{background:rgba(249,115,22,.15)}
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
+@keyframes up{to{opacity:1;transform:translateY(0)}}
+@keyframes scrollDown{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-in;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
+.rl.on{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
+.rr.on{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.16s}.d3{transition-delay:.25s}.d4{transition-delay:.34s}

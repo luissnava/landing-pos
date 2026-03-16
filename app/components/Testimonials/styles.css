@@ -1,0 +1,23 @@
+.testi-s { background: var(--ink2); padding: 120px 72px; }
+.tg { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); margin-top: 64px; }
+.tc { background: #fff; padding: 40px 36px; transition: background .3s; }
+.tc:hover { background: #FFFAF7; }
+.tc-top { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.tc-av {
+  width: 42px; height: 42px;
+  background: rgba(249,115,22,.1); border: 1px solid rgba(249,115,22,.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: #E85520;
+}
+.tc-name { font-size: .83rem; font-weight: 500; color: #1A1210; }
+.tc-role { font-size: .7rem; color: var(--fog2); margin-top: 2px; }
+.tc-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+.ts {
+  width: 11px; height: 11px; background: #F97316;
+  clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+.tc-text { font-size: .82rem; color: var(--fog); line-height: 1.8; font-style: italic; font-weight: 300; }
+@media(max-width:768px) {
+  .testi-s { padding: 72px 24px; }
+  .tg { grid-template-columns: 1fr; }
+}

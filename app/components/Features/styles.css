@@ -1,0 +1,59 @@
+.feat-s { background: var(--ink2); padding: 120px 72px; }
+.feat-head {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: end; margin-bottom: 72px;
+}
+.tag {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+  color: #E85520; margin-bottom: 20px; font-weight: 600;
+}
+.tag::before { content: ''; width: 20px; height: 1px; background: rgba(232,85,32,.4); }
+.h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; line-height: 1.1; color: #1A1210; letter-spacing: -.01em;
+}
+.h2 em {
+  font-style: italic; background: var(--grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.sub {
+  font-size: .88rem; color: var(--fog); line-height: 1.85;
+  font-weight: 300; max-width: 500px; margin-top: 16px;
+}
+.feat-grid { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--rule); }
+.fc {
+  padding: 48px 40px; border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: relative; overflow: hidden;
+  transition: background .35s; background: #fff;
+}
+.fc:nth-child(3n) { border-right: none; }
+.fc:nth-child(n+4) { border-bottom: none; }
+.fc:hover { background: #FFFAF7; }
+.fc::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 0; width: 0; height: 2px;
+  background: var(--grad); transition: width .45s;
+}
+.fc:hover::after { width: 100%; }
+.fc-num {
+  font-size: 5rem; color: rgba(0,0,0,.04);
+  position: absolute; top: 12px; right: 20px; line-height: 1; font-weight: 400;
+}
+.fc-icon {
+  width: 40px; height: 40px; margin-bottom: 24px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(249,115,22,.08); border: 1px solid rgba(249,115,22,.18);
+}
+.fc-icon svg { width: 18px; height: 18px; stroke: #E85520; fill: none; stroke-width: 1.5; }
+.fc h3 { font-size: 1.15rem; font-weight: 400; margin-bottom: 12px; color: #1A1210; }
+.fc p { font-size: .8rem; line-height: 1.8; color: var(--fog); font-weight: 300; }
+
+@media(max-width:1100px) { .feat-head { grid-template-columns: 1fr; } }
+@media(max-width:768px) {
+  .feat-s { padding: 72px 24px; }
+  .feat-grid { grid-template-columns: 1fr; }
+  .fc { border-right: none !important; border-bottom: 1px solid var(--rule) !important; }
+  .fc:last-child { border-bottom: none !important; }
+}
