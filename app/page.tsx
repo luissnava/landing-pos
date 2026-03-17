@@ -1,4 +1,4 @@
-import { Navbar, Hero, Strip, Features, Plans, Testimonials, Contact, Benefits, FAQ, WhatsAppButton, Footer } from '@/app/components';
+import { Navbar, Hero, Features, Plans, Contact, Benefits, FAQ, WhatsAppButton, Footer } from '@/app/components';
 import landingData from '@/app/data/landing-data.json';
 
 export default function Home() {
