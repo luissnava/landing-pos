@@ -13,20 +13,18 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} aria-label="Principal">
       <Link href="#" className="nav-logo">
-        <div className="logo-mark">M</div>
+        <div className="logo-mark">MC</div>
         MiComanda
       </Link>
       <ul className="nav-links">
         <li><Link href="#funciones">Funciones</Link></li>
-        <li><Link href="#como">Cómo funciona</Link></li>
         <li><Link href="#precios">Precios</Link></li>
         <li><Link href="#faq">FAQ</Link></li>
         <li><Link href="/legal">Legal</Link></li>
       </ul>
       <div className="nav-right">
-        {/* <Link href="#" className="btn-ng">Iniciar sesión</Link> */}
         <Link href="#precios" className="btn-nc">Prueba gratuita</Link>
       </div>
     </nav>

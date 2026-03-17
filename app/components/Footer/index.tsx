@@ -8,13 +8,13 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link href="/" className="footer-logo">
-              <div className="footer-logo-mark">M</div>
+              <div className="footer-logo-mark">MC</div>
               MiComanda
             </Link>
-            <p className="footer-desc">Sistema punto de venta diseñado para restaurantes. Gestione mesas, comandas y ventas desde un solo lugar.</p>
+            <p className="footer-desc">Sistema POS para restaurantes. Gestione mesas, comandas y ventas desde un solo lugar.</p>
           </div>
 
-          <div className="footer-col">
+          <nav className="footer-col" aria-label="Navegación">
             <h4>Navegación</h4>
             <ul>
               <li><Link href="/#funciones">Funciones</Link></li>
@@ -22,9 +22,9 @@ export default function Footer() {
               <li><Link href="/#precios">Precios</Link></li>
               <li><Link href="/#faq">FAQ</Link></li>
             </ul>
-          </div>
+          </nav>
 
-          <div className="footer-col">
+          <nav className="footer-col" aria-label="Producto">
             <h4>Producto</h4>
             <ul>
               <li><Link href="/#precios">Prueba gratuita</Link></li>
@@ -32,15 +32,15 @@ export default function Footer() {
               <li><Link href="/#funciones">Comandas Digitales</Link></li>
               <li><Link href="/#funciones">Reportes de Ventas</Link></li>
             </ul>
-          </div>
+          </nav>
 
-          <div className="footer-col">
+          <nav className="footer-col" aria-label="Legal">
             <h4>Legal</h4>
             <ul>
               <li><Link href="/legal?tab=aviso">Aviso de Privacidad</Link></li>
               <li><Link href="/legal?tab=terminos">Términos de Uso</Link></li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         <div className="footer-bottom">

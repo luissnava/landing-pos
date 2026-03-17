@@ -22,12 +22,12 @@ export default function Features() {
   }, []);
 
   return (
-    <section className="feat-s" id="funciones" ref={ref}>
+    <section className="feat-s" id="funciones" ref={ref} aria-labelledby="feat-heading">
       <div className="wrap" style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div className="feat-head">
           <div className="rl">
             <p className="tag">Plataforma completa</p>
-            <h2 className="h2">Todo lo que necesita<br/>para <em>operar mejor</em></h2>
+            <h2 className="h2" id="feat-heading">Todo lo que necesita<br/>para <em>operar mejor</em></h2>
           </div>
           <div className="rr">
             <p className="sub">Un sistema de herramientas diseñado específicamente para la operación diaria de restaurantes.</p>
@@ -35,12 +35,12 @@ export default function Features() {
         </div>
         <div className="feat-grid">
           {features.map((f, i) => (
-            <div key={f.num} className={`fc rv d${(i % 4) + 1}`}>
+            <article key={f.num} className={`fc rv d${(i % 4) + 1}`}>
               <div className="fc-num">{f.num}</div>
-              <div className="fc-icon"><svg viewBox="0 0 24 24">{f.icon}</svg></div>
+              <div className="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{f.icon}</svg></div>
               <h3>{f.title}</h3>
               <p>{f.desc}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

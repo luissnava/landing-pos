@@ -8,7 +8,7 @@ interface HeroProps {
 export default function Hero({ data }: HeroProps) {
   const waLink = `https://wa.me/${data.whatsappNumber}?text=${encodeURIComponent('Hola, me interesa conocer más sobre el sistema POS para restaurantes')}`;
   return (
-    <section className="hero">
+    <header className="hero" role="banner">
       <div className="hero-bg" />
       <div className="hero-vignette" />
       <div className="hero-line-h" />
@@ -40,6 +40,6 @@ export default function Hero({ data }: HeroProps) {
         {/* <div className="scroll-box"><div className="scroll-pill" /></div> */}
         <span className="scroll-hint">Descubrir</span>
       </div>
-    </section>
+    </header>
   );
 }

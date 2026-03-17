@@ -19,20 +19,20 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="testi-s" ref={ref}>
+    <section className="testi-s" ref={ref} aria-labelledby="testi-heading">
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <p className="tag rv">Casos de éxito</p>
-        <h2 className="h2 rv">Lo que dicen<br/><em>nuestros clientes</em></h2>
+        <h2 className="h2 rv" id="testi-heading">Lo que dicen<br/><em>nuestros clientes</em></h2>
         <div className="tg">
           {testimonials.map((t, i) => (
-            <div key={i} className={`tc rv d${i + 1}`}>
+            <article key={i} className={`tc rv d${i + 1}`}>
               <div className="tc-top">
                 <div className="tc-av">{t.initial}</div>
                 <div><div className="tc-name">{t.name}</div><div className="tc-role">{t.role}</div></div>
               </div>
-              <div className="tc-stars">{[...Array(5)].map((_, si) => <div key={si} className="ts" />)}</div>
-              <p className="tc-text">{t.text}</p>
-            </div>
+              <div className="tc-stars" aria-label={`5 estrellas`}>{[...Array(5)].map((_, si) => <div key={si} className="ts" />)}</div>
+              <blockquote className="tc-text">{t.text}</blockquote>
+            </article>
           ))}
         </div>
       </div>

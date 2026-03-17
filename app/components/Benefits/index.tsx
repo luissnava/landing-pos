@@ -20,12 +20,12 @@ export default function Benefits() {
   }, []);
 
   return (
-    <section className="benefits-s" ref={ref}>
+    <section className="benefits-s" ref={ref} aria-labelledby="benefits-heading">
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div className="benefits-head">
           <div className="rl">
             <p className="tag">¿Por qué elegirnos?</p>
-            <h2 className="h2">Ventajas que hacen<br/>la <em>diferencia</em></h2>
+            <h2 className="h2" id="benefits-heading">Ventajas que hacen<br/>la <em>diferencia</em></h2>
           </div>
           <div className="rr">
             <p className="sub">Más que un sistema POS. Una plataforma pensada para el restaurantero mexicano.</p>
@@ -33,11 +33,11 @@ export default function Benefits() {
         </div>
         <div className="benefits-grid">
           {benefits.map((b, i) => (
-            <div key={i} className={`bc rv d${i + 1}`}>
-              <div className="bc-icon"><svg viewBox="0 0 24 24">{b.icon}</svg></div>
+            <article key={i} className={`bc rv d${i + 1}`}>
+              <div className="bc-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{b.icon}</svg></div>
               <h3>{b.title}</h3>
               <p>{b.desc}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

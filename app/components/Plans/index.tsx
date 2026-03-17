@@ -24,11 +24,11 @@ export default function Plans({ data, whatsappNumber }: { data: Plan[]; whatsapp
 
   return (
     <>
-      <section className="pricing-s" id="precios" ref={ref}>
+      <section className="pricing-s" id="precios" ref={ref} aria-labelledby="pricing-heading">
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div className="pricing-head">
             <p className="tag rv" style={{ justifyContent: 'center' }}>Planes y precios</p>
-            <h2 className="h2 rv" style={{ marginTop: 8 }}>Elige el plan <em>ideal</em><br/>para tu negocio</h2>
+            <h2 className="h2 rv" id="pricing-heading" style={{ marginTop: 8 }}>Elige el plan <em>ideal</em><br/>para tu negocio</h2>
             <p className="sub rv" style={{ margin: '16px auto 0', textAlign: 'center' }}>Sin comisiones ocultas. Sin permanencia forzada. Cancela cuando quieras.</p>
             <div className="billing-tog rv">
               <span className={`bt-label ${!annual ? 'on' : ''}`}>Facturación mensual</span>
@@ -39,7 +39,7 @@ export default function Plans({ data, whatsappNumber }: { data: Plan[]; whatsapp
           </div>
           <div className="pg">
             {data.map((plan, i) => (
-              <div key={plan.id} className={`pc rv d${i + 1} ${plan.popular ? 'feat' : ''}`}>
+              <article key={plan.id} className={`pc rv d${i + 1} ${plan.popular ? 'feat' : ''}`}>
                 {plan.popular && <div className="best-tag">Más popular</div>}
                 <div className="pc-name">{plan.badge} {plan.name}</div>
                 <div className="pc-price">
@@ -73,7 +73,7 @@ export default function Plans({ data, whatsappNumber }: { data: Plan[]; whatsapp
                 <button onClick={() => setSelectedPlan(plan)} className={`btn-p ${plan.popular ? 'btn-p-g' : 'btn-p-o'}`}>
                   {plan.isTrial ? 'Comenzar prueba gratis' : 'Contratar ahora'}
                 </button>
-              </div>
+              </article>
             ))}
           </div>
         </div>

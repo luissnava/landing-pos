@@ -25,17 +25,17 @@ export default function FAQ({ whatsappNumber }: { whatsappNumber: string }) {
   const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hola, me interesa conocer más sobre el sistema POS')}`;
 
   return (
-    <section className="faq-s" id="faq" ref={ref}>
+    <section className="faq-s" id="faq" ref={ref} aria-labelledby="faq-heading">
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <p className="tag rv">Preguntas frecuentes</p>
-        <h2 className="h2 rv">Respuestas<br/><em>a sus dudas</em></h2>
+        <h2 className="h2 rv" id="faq-heading">Respuestas<br/><em>a sus dudas</em></h2>
         <div className="faq-layout">
           <div className="faq-list rv">
             {faqs.map((faq, i) => (
               <div key={i} className={`fi ${open === i ? 'open' : ''}`}>
-                <button className="fi-q" onClick={() => setOpen(open === i ? null : i)}>
+                <button className="fi-q" onClick={() => setOpen(open === i ? null : i)} aria-expanded={open === i}>
                   {faq.q}
-                  <div className="fi-ico"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <div className="fi-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
                 </button>
                 <div className="fi-a">{faq.a}</div>
               </div>

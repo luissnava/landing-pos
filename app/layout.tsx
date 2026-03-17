@@ -9,17 +9,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MiComanda — Sistema de Punto de Venta para Restaurantes",
-  description: "MiComanda: Sistema punto de venta diseñado para restaurantes. Gestiona mesas, órdenes, menú digital y reportes. Planes desde $49 USD/mes. Soporte en español.",
-  keywords: ["MiComanda", "POS restaurante", "sistema punto de venta", "gestión restaurante", "software restaurante", "POS México", "sistema mesas", "órdenes restaurante"],
+  title: "MiComanda — Sistema POS para Restaurantes",
+  description: "MiComanda: Sistema POS para restaurantes. Gestiona mesas, comandas digitales, tickets de venta, menú digital y reportes por periodo. Funciona en tablet, iPad, smartphone y PC. Soporte en español.",
+  keywords: [
+    "MiComanda", "Comanda", "comanda", "POS restaurante", "sistema punto de venta", "POS", "gestión restaurante",
+    "software restaurante", "POS México", "sistema mesas", "órdenes restaurante",
+    "comandas digitales", "tickets de venta", "menú digital restaurante",
+    "reportes de ventas restaurante", "punto de venta tablet", "POS iPad",
+    "sistema restaurante México", "control de mesas", "cocina digital",
+    "software punto de venta", "POS en español", "sistema comandas",
+  ],
   authors: [{ name: "MiComanda" }],
   openGraph: {
-    title: "MiComanda — Sistema de Punto de Venta para Restaurantes",
-    description: "Gestiona tu restaurante de manera profesional con MiComanda.",
+    title: "MiComanda — Sistema POS para Restaurantes",
+    description: "Gestiona mesas, comandas, tickets y reportes de tu restaurante desde cualquier dispositivo. Soporte en español.",
     type: "website",
     locale: "es_MX",
+    siteName: "MiComanda",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MiComanda — POS para Restaurantes",
+    description: "Sistema punto de venta con comandas digitales, gestión de mesas y reportes. Funciona en tablet, smartphone y PC.",
   },
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://systempos.gruponava.org" },
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({

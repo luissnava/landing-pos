@@ -563,7 +563,7 @@ export default function LegalPages() {
     <div className="legal-page">
       <nav className="legal-nav">
         <Link href="/" className="legal-nav-logo">
-          <div className="legal-logo-mark">M</div>
+          <div className="legal-logo-mark">MC</div>
           MiComanda
         </Link>
         <div className="legal-nav-links">
