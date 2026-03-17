@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import './styles.css';
 
 const testimonials = [
-  { initial: 'M', name: 'Marco Ríos', role: 'Director · La Taquería MX, CDMX', text: '"Antes tardábamos 20 minutos en cuadrar caja. Con ORION son tres minutos y sin errores."' },
+  { initial: 'M', name: 'Marco Ríos', role: 'Director · La Taquería MX, CDMX', text: '"Antes tardábamos 20 minutos en cuadrar caja. Con MiComanda son tres minutos y sin errores."' },
   { initial: 'S', name: 'Sofía Herrera', role: 'Directora de Ops · Grupo Sabor & Co', text: '"Manejamos seis sucursales desde un solo dashboard. El control de inventario nos redujo 15% en mermas."' },
   { initial: 'J', name: 'Jorge Castillo', role: 'Chef & Propietario · Nido Bistró', text: '"La integración con Uber Eats y Rappi cambió todo. Dejamos de usar tres tabletas por separado."' },
 ];

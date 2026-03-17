@@ -15,8 +15,8 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <Link href="#" className="nav-logo">
-        <div className="logo-mark">O</div>
-        ORION
+        <div className="logo-mark">M</div>
+        MiComanda
       </Link>
       <ul className="nav-links">
         <li><Link href="#funciones">Funciones</Link></li>

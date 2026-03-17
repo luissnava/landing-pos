@@ -563,8 +563,8 @@ export default function LegalPages() {
     <div className="legal-page">
       <nav className="legal-nav">
         <Link href="/" className="legal-nav-logo">
-          <div className="legal-logo-mark">O</div>
-          ORION
+          <div className="legal-logo-mark">M</div>
+          MiComanda
         </Link>
         <div className="legal-nav-links">
           {TABS.map((tab) => (

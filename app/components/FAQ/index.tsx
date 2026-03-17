@@ -3,10 +3,10 @@ import { useState, useEffect, useRef } from 'react';
 import './styles.css';
 
 const faqs = [
-  { q: '¿Necesito hardware especial para usar ORION?', a: 'No. ORION funciona en cualquier tablet Android o iPad, smartphone o computadora con navegador.' },
-  { q: '¿Cuánto tiempo toma implementar ORION en mi restaurante?', a: 'La configuración inicial toma menos de 60 minutos. Nuestro equipo le ayuda a cargar su menú, configurar mesas y capacitar a su personal sin costo adicional.' },
+  { q: '¿Necesito hardware especial para usar MiComanda?', a: 'No. MiComanda funciona en cualquier tablet Android o iPad, smartphone o computadora con navegador.' },
+  { q: '¿Cuánto tiempo toma implementar MiComanda en mi restaurante?', a: 'La configuración inicial toma menos de 60 minutos. Nuestro equipo le ayuda a cargar su menú, configurar mesas y capacitar a su personal sin costo adicional.' },
   { q: '¿Puedo cambiar de plan en cualquier momento?', a: 'Sí. Puede hacer upgrade o downgrade desde su panel de administración en cualquier momento. El cambio se aplica en la proxima fecha de corte' },
-  { q: '¿ORION incluye reportes y estadísticas de ventas?', a: 'Sí. Puede consultar reportes diarios, semanales y mensuales de ventas' },
+  { q: '¿MiComanda incluye reportes?', a: 'Sí. Puede consultar reportes de ventas, de cualquier rango de fechas' },
   { q: '¿Tienen soporte en México?', a: 'Nuestro equipo de soporte está en México. Atención por chat, de Lunes a Viernes de 9:00 am a 6:00 pm' },
 ];
 
@@ -45,7 +45,7 @@ export default function FAQ({ whatsappNumber }: { whatsappNumber: string }) {
             <div className="faq-aside rr">
               <p className="tag" style={{ marginBottom: 16 }}>¿Más preguntas?</p>
               <h3>Hable con un<br/>especialista</h3>
-              <p>Agende una demostración de 30 minutos con nuestro equipo.</p>
+              <p>Le resolveremos todas sus dudas.</p>
               <a href={waLink} target="_blank" className="faq-btn">Contactar por WhatsApp</a>
             </div>
           </div>

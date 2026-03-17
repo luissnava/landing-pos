@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link href="/" className="footer-logo">
-              <div className="footer-logo-mark">O</div>
-              ORION
+              <div className="footer-logo-mark">M</div>
+              MiComanda
             </Link>
             <p className="footer-desc">Sistema punto de venta diseñado para restaurantes. Gestione mesas, comandas y ventas desde un solo lugar.</p>
           </div>
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2025 <span className="footer-gradient">ORION POS</span> — Todos los derechos reservados</span>
+          <span>© 2025 <span className="footer-gradient">MiComanda</span> — Todos los derechos reservados</span>
         </div>
       </div>
     </footer>
