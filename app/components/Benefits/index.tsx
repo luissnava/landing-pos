@@ -6,7 +6,7 @@ const benefits = [
   { icon: <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>, title: 'Fácil de Usar', desc: 'Interfaz intuitiva que tu equipo aprenderá en minutos. No requiere capacitación extensa.' },
   { icon: <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>, title: 'Soporte en Español', desc: 'Equipo de soporte disponible en tu idioma para resolver cualquier duda o problema.' },
   { icon: <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>, title: 'Actualizaciones Constantes', desc: 'Mejoras continuas y nuevas funcionalidades incluidas en tu plan, sin costo adicional.' },
-  { icon: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>, title: 'Seguridad Garantizada', desc: 'Tus datos protegidos con los más altos estándares de seguridad.' },
+  { icon: <><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></>, title: 'Funciona en Cualquier Dispositivo', desc: 'Funciona en cualquier tablet Android o iPad, smartphone o computadora con navegador.' },
 ];
 
 export default function Benefits() {
