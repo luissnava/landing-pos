@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitData } from '@/app/actions/useFetch';
 import './styles.css';
@@ -21,6 +21,8 @@ interface PlansModalProps {
 export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModalProps) {
     const router = useRouter();
     const [acceptedTerms, setAcceptedTerms] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState<{ text: string; type: 'error' | 'success' } | null>(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -29,6 +31,14 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
         rfc: '',
         period: 'monthly' as 'monthly' | 'annual'
     });
+
+    const resetAndClose = useCallback(() => {
+        setAcceptedTerms(false);
+        setFormData({ name: '', email: '', businessName: '', phone_number: '', rfc: '', period: 'monthly' });
+        setMessage(null);
+        setLoading(false);
+        onClose();
+    }, [onClose]);
 
     const isTrial = selectedPlan?.isTrial || false;
 
@@ -46,18 +56,22 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true);
+        setMessage(null);
         const submitFormData = {
             ...formData,
             planId: selectedPlan?.id || '',
             plan: selectedPlan?.name || ''
         };
         const result = await submitData(submitFormData);
+        setLoading(false);
         if (result.success && result.data?.data?.checkout_url) {
             router.push(result.data.data.checkout_url);
         } else if (result.success) {
-            onClose();
-            setAcceptedTerms(false);
-            setFormData({ name: '', email: '', businessName: '', phone_number: '', rfc: '', period: 'monthly' });
+            setMessage({ text: result.data?.message || 'Registro exitoso', type: 'success' });
+            setTimeout(resetAndClose, 3000);
+        } else {
+            setMessage({ text: result.message || 'Ocurrió un error', type: 'error' });
         }
     };
 
@@ -111,8 +125,11 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                             <input type="checkbox" checked={acceptedTerms} onChange={(e) => setAcceptedTerms(e.target.checked)} />
                             <span>Acepto los <a href="/legal?tab=terminos" target="_blank" rel="noreferrer">Términos y Condiciones</a> y el <a href="/legal?tab=aviso" target="_blank" rel="noreferrer">Aviso de Privacidad</a></span>
                         </label>
-                        <button type="submit" className="modal-submit" disabled={!acceptedTerms}>
-                            {isTrial ? 'Comenzar prueba gratis' : 'Contratar'}
+                        {message && (
+                            <p className={`modal-message ${message.type}`}>{message.text}</p>
+                        )}
+                        <button type="submit" className="modal-submit" disabled={!acceptedTerms || loading}>
+                            {loading ? 'Procesando...' : isTrial ? 'Comenzar prueba gratis' : 'Contratar'}
                         </button>
                     </form>
                 </div>

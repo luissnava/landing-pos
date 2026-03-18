@@ -7,6 +7,7 @@
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
+  z-index: 9999;
 }
 
 .modal-container {
@@ -138,4 +139,21 @@
 .modal-submit:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.modal-message {
+  font-size: 0.8rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.modal-message.error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+.modal-message.success {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
 }

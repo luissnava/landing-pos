@@ -50,18 +50,17 @@ export async function submitData(formData: {
     });
 
 
+    const data = await response.json();
+
     if (!response.ok) {
-      console.log(response);
-      const dataError = await response.json()
-      console.log(dataError);
-      
-      throw new Error('Error al enviar la solicitud');
+      return { success: false, message: data?.error?.message || data?.message || 'Error al enviar la solicitud' };
     }
 
-
-    return { success: true, data: await response.json() };
+    return { success: true, data };
   } catch (error) {
-    return { success: false, error: error };
+    console.log(error);
+    
+    return { success: false, message: 'Error de conexión. Intente de nuevo.' };
   }
 }
 
