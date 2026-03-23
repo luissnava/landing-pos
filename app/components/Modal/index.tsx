@@ -27,14 +27,13 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
         name: '',
         email: '',
         businessName: '',
-        phone_number: '',
         rfc: '',
         period: 'monthly' as 'monthly' | 'annual'
     });
 
     const resetAndClose = useCallback(() => {
         setAcceptedTerms(false);
-        setFormData({ name: '', email: '', businessName: '', phone_number: '', rfc: '', period: 'monthly' });
+        setFormData({ name: '', email: '', businessName: '', rfc: '', period: 'monthly' });
         setMessage(null);
         setLoading(false);
         onClose();
@@ -106,10 +105,6 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                         <div className="modal-field">
                             <label>Nombre del restaurante <span>*</span></label>
                             <input type="text" name="businessName" value={formData.businessName} onChange={handleChange} required className="modal-input" />
-                        </div>
-                        <div className="modal-field">
-                            <label>Teléfono <span>*</span></label>
-                            <input type="tel" name="phone_number" value={formData.phone_number} onChange={handleChange} required className="modal-input" />
                         </div>
                         {!isTrial && (
                             <div className="modal-field">

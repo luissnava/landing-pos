@@ -6,7 +6,6 @@ export async function submitData(formData: {
   name: string;
   email: string;
   businessName: string;
-  phone_number: string;
   rfc?: string;
   period: 'monthly' | 'annual';
 }) {
@@ -31,7 +30,6 @@ export async function submitData(formData: {
     plan_ulid,
     name: formData.name,
     email: formData.email,
-    phone_number: formData.phone_number,
     ...(formData.businessName && { legal_name: formData.businessName })
   };
 
