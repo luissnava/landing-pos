@@ -1,17 +1,12 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 import Link from 'next/link';
-import { notifyPaymentSuccess } from '@/app/actions/useFetch';
 import '../styles.css';
 
-function SuccessContent() {
+function CancelledContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get('session_id');
-
-  useEffect(() => {
-    if (sessionId) notifyPaymentSuccess(sessionId);
-  }, [sessionId]);
 
   return (
     <div className="payment-page">
@@ -26,26 +21,22 @@ function SuccessContent() {
 
       <main className="payment-main">
         <div className="payment-icon-wrap">
-          <div className="payment-icon success">
+          <div className="payment-icon error">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </div>
-          <h1 className="payment-title">Pago Exitoso</h1>
-          <p className="payment-subtitle">Tu pago ha sido procesado correctamente</p>
+          <h1 className="payment-title">Pago cancelado</h1>
+          <p className="payment-subtitle">El proceso de pago fue cancelado. No se realizó ningún cargo.</p>
         </div>
 
-        <div className="payment-info">
-          <h3>Información Importante</h3>
-          <ul>
-            <li>Recibirás un correo electrónico con más información</li>
-            <li>Tu suscripción estará activa inmediatamente</li>
-            <li>Si tienes alguna pregunta, contacta a nuestro equipo de soporte</li>
-          </ul>
-        </div>
+        {sessionId && <p className="payment-session">{sessionId}</p>}
 
         <div className="payment-actions">
-          <Link href="/" className="payment-btn payment-btn-primary">Volver al inicio</Link>
+          <button onClick={() => window.history.back()} className="payment-btn payment-btn-primary">
+            Intentar de nuevo
+          </button>
+          <Link href="/" className="payment-btn payment-btn-secondary">Volver al inicio</Link>
         </div>
       </main>
 
@@ -62,10 +53,10 @@ function SuccessContent() {
   );
 }
 
-export default function SuccessPage() {
+export default function CancelledPage() {
   return (
     <Suspense fallback={<div className="payment-page" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Cargando...</div>}>
-      <SuccessContent />
+      <CancelledContent />
     </Suspense>
   );
 }
