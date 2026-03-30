@@ -1,17 +1,12 @@
 'use client';
-import { useSearchParams } from 'next/navigation';
-import { Suspense, useEffect } from 'react';
+// import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import Link from 'next/link';
-import { notifyPaymentSuccess } from '@/app/actions/useFetch';
 import '../styles.css';
 
 function SuccessContent() {
-  const searchParams = useSearchParams();
-  const sessionId = searchParams.get('session_id');
-
-  useEffect(() => {
-    if (sessionId) notifyPaymentSuccess(sessionId);
-  }, [sessionId]);
+  // const searchParams = useSearchParams();
+  // const sessionId = searchParams.get('session_id');
 
   return (
     <div className="payment-page">

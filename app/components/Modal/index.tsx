@@ -68,7 +68,6 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
             router.push(result.data.data.checkout_url);
         } else if (result.success) {
             setMessage({ text: result.data?.message || 'Registro exitoso', type: 'success' });
-            setTimeout(resetAndClose, 3000);
         } else {
             setMessage({ text: result.message || 'Ocurrió un error', type: 'error' });
         }
@@ -81,7 +80,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
     return (
         <div className="modal-overlay">
             <div className="modal-container">
-                <button type="button" onClick={onClose} className="modal-close">
+                <button type="button" onClick={resetAndClose} className="modal-close">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
