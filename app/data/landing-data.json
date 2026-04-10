@@ -51,8 +51,6 @@
         "Sin tarjeta de crédito"
       ],
       "notIncluded": [
-        "Datos se conservan si contratas después",
-        "Al finalizar, elige un plan o datos se eliminan en 7 días"
       ],
       "popular": false,
       "isTrial": true
@@ -62,26 +60,22 @@
       "name": "Plan Inicial",
       "badge": "🥉",
       "price": "$61 USD",
-      "priceMXN": "$1,100 MXN",
+      "priceMXN": "$1,200 MXN",
       "period": "/mes",
       "annualPrice": "$623 USD/año",
-      "annualPriceMXN": "$11,220 MXN/año",
+      "annualPriceMXN": "$12,240 MXN/año",
       "annualDiscount": "15% descuento",
       "description": "Ideal para negocios muy pequeños o food trucks",
       "features": [
         "Hasta 10 mesas",
-        "2 usuarios (meseros)",
+        "2 usuarios (meseros/cocineros)",
         "Menú hasta 20 productos",
         "Tickets",
-        "Reportes básicos",
-        "Soporte por email",
-        "Vista de Cocina"
+        "Vista de Cocina",
+        "Reportes",
+        "Soporte por email"
       ],
       "notIncluded": [
-        "Sin backup",
-        "Sin vista de cocina",
-        "Sin personalización de marca",
-        "Sin reportes avanzados"
       ],
       "popular": false
     },
@@ -93,13 +87,13 @@
       "price": "$93 USD",
       "priceMXN": "$1,680 MXN",
       "period": "/mes",
-      "annualPrice": "$952 USD/año",
+      "annualPrice": "$949 USD/año",
       "annualPriceMXN": "$17,136 MXN/año",
       "annualDiscount": "15% descuento",
       "description": "Ideal para pequeños restaurantes",
       "features": [
         "Hasta 20 mesas",
-        "5 usuarios (meseros)",
+        "5 usuarios (meseros/cocineros)",
         "Menú hasta 50 productos",
         "Tickets",
         "Vista de Cocina",
@@ -107,9 +101,6 @@
         "Soporte por Email"
       ],
       "notIncluded": [
-        "Sin backup",
-        "Sin personalización de marca",
-        "Sin reportes avanzados"
       ],
       "popular": true
     }

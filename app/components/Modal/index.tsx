@@ -90,7 +90,7 @@ export default function PlansModal({ isOpen, onClose, selectedPlan }: PlansModal
                         {isTrial ? 'Comienza tu prueba gratis' : 'Contratar Plan'}
                     </h3>
                     <p className="modal-subtitle">
-                        {isTrial ? '7 días sin compromiso. Sin tarjeta de crédito.' : 'Completa el formulario para contratar tu plan.'}
+                        {isTrial ? '5 días sin compromiso. Sin tarjeta de crédito.' : 'Completa el formulario para contratar tu plan.'}
                     </p>
                     <form onSubmit={handleSubmit} className="modal-form">
                         <div className="modal-field">

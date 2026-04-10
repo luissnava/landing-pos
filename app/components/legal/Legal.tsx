@@ -12,9 +12,9 @@ const CONFIG = {
   domicilio: "[DOMICILIO FISCAL]",
   email: "contacto@gruponava.org",
   telefono: "[TELÉFONO]",
-  sitio: "systempos.gruponava.org",
-  servicio: "[NOMBRE DE TU SOFTWARE/SERVICIO]",
-  fecha: "15 de marzo de 2026",
+  sitio: "micomanda.gruponava.org",
+  servicio: "MiComanda",
+  fecha: "10 de abril de 2026",
 };
 
 // ─── Componentes base ─────────────────────────────────────────────────────────
@@ -396,7 +396,6 @@ function AvisoPage() {
     ["Autoridades fiscales (SAT)", "Cumplimiento fiscal", "No requerido"],
     ["Procesadores de pago PCI-DSS", "Procesamiento de cobros", "No requerido"],
     ["Proveedores cloud", "Hospedaje del sistema", "No requerido"],
-    ["Socios publicitarios", "Marketing y promociones", "Sí, previo"],
   ];
 
   return (

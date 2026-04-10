@@ -4,8 +4,7 @@ import './styles.css';
 
 const faqs = [
   { q: '¿Necesito hardware especial para usar MiComanda?', a: 'No. MiComanda funciona en cualquier tablet Android o iPad, smartphone o computadora con navegador.' },
-  { q: '¿Cuánto tiempo toma implementar MiComanda en mi restaurante?', a: 'La configuración inicial toma menos de 60 minutos. Nuestro equipo le ayuda a cargar su menú, configurar mesas y capacitar a su personal sin costo adicional.' },
-  { q: '¿Puedo cambiar de plan en cualquier momento?', a: 'Sí. Puede hacer upgrade o downgrade desde su panel de administración en cualquier momento. El cambio se aplica en la proxima fecha de corte' },
+  { q: '¿Cuánto tiempo toma implementar MiComanda en mi restaurante?', a: 'La configuración inicial toma menos de 60 minutos.' },
   { q: '¿MiComanda incluye reportes?', a: 'Sí. Puede consultar reportes de ventas, de cualquier rango de fechas' },
   { q: '¿Tienen soporte en México?', a: 'Nuestro equipo de soporte está en México. Atención por chat, de Lunes a Viernes de 9:00 am a 6:00 pm' },
 ];

@@ -1,5 +1,5 @@
-.pricing-s { background: var(--ink2); padding: 120px 72px; }
-.pricing-head { text-align: center; margin-bottom: 60px; }
+.pricing-s { background: var(--ink2); padding: 12px 72px; }
+.pricing-head { text-align: center; margin-bottom: 0px; }
 .billing-tog {
   display: inline-flex; align-items: center; gap: 14px;
   border: 1px solid var(--rule); padding: 6px 16px;
@@ -43,7 +43,7 @@
 .pc.feat .pc-name { color: #E85520; }
 .pc-price { display: flex; align-items: baseline; gap: 3px; margin-bottom: 8px; }
 .pp-sym { font-size: 1rem; color: var(--fog); font-weight: 300; margin-top: 6px; }
-.pp-amt { font-size: 2rem; color: #1A1210; line-height: 1; font-weight: 400; }
+.pp-amt { font-size: 1.5rem; color: #1A1210; line-height: 1; font-weight: 400; }
 .pc.feat .pp-amt {
   background: var(--grad); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; background-clip: text;

@@ -28,7 +28,7 @@ export default function Plans({ data, whatsappNumber }: { data: Plan[]; whatsapp
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div className="pricing-head">
             <p className="tag rv" style={{ justifyContent: 'center' }}>Planes y precios</p>
-            <h2 className="h2 rv" id="pricing-heading" style={{ marginTop: 8 }}>Elige el plan <em>ideal</em><br/>para tu negocio</h2>
+            <h2 className="h2 rv" id="pricing-heading" style={{ marginTop: 8 }}>Elige el plan <em>ideal</em><br />para tu negocio</h2>
             <p className="sub rv" style={{ margin: '16px auto 0', textAlign: 'center' }}>Sin comisiones ocultas. Sin permanencia forzada. Cancela cuando quieras.</p>
             <div className="billing-tog rv">
               <span className={`bt-label ${!annual ? 'on' : ''}`}>Facturación mensual</span>
@@ -45,11 +45,10 @@ export default function Plans({ data, whatsappNumber }: { data: Plan[]; whatsapp
                 <div className="pc-price">
                   {plan.isTrial ? (
                     <span className="pp-amt-free">Gratis</span>
-                  ) : plan.price ? (
+                  ) : plan.priceMXN ? (
                     <>
-                      <span className="pp-sym">$</span>
-                      <span className="pp-amt">{annual && plan.annualPrice ? plan.annualPrice.replace('/año','') : plan.price.replace(' USD','')}</span>
-                      <span className="pp-per">{annual ? '/año · ' + (plan.annualPriceMXN || '') : plan.period + ' · ' + (plan.priceMXN || '')}</span>
+                      <span className="pp-amt">{annual ? plan.annualPriceMXN?.replace('/año', '') : plan.priceMXN}</span>
+                      <span className="pp-per">{annual ? '/año' : plan.period}</span>
                     </>
                   ) : (
                     <span className="pp-amt">Personalizado</span>
@@ -59,13 +58,13 @@ export default function Plans({ data, whatsappNumber }: { data: Plan[]; whatsapp
                 <ul className="pf">
                   {plan.features.map((f, fi) => (
                     <li key={fi} className="y">
-                      <div className="pf-ck"><svg viewBox="0 0 10 10"><path d="M1.5 5l2.5 2.5 4.5-4.5"/></svg></div>
+                      <div className="pf-ck"><svg viewBox="0 0 10 10"><path d="M1.5 5l2.5 2.5 4.5-4.5" /></svg></div>
                       {f}
                     </li>
                   ))}
                   {plan.notIncluded.map((f, fi) => (
                     <li key={fi} className="n">
-                      <div className="pf-ck"><svg viewBox="0 0 10 10"><path d="M2 2l6 6M8 2l-6 6"/></svg></div>
+                      <div className="pf-ck"><svg viewBox="0 0 10 10"><path d="M2 2l6 6M8 2l-6 6" /></svg></div>
                       {f}
                     </li>
                   ))}

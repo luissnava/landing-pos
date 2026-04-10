@@ -6,10 +6,8 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero data={landingData.hero} />
-      {/* <Strip /> */}
       <Features />
       <Plans data={landingData.plans} whatsappNumber={landingData.hero.whatsappNumber} />
-      {/* <Testimonials /> */}
       <Contact data={landingData.contact} />
       <Benefits />
       <FAQ whatsappNumber={landingData.hero.whatsappNumber} />
