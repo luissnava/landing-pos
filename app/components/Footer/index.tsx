@@ -37,14 +37,14 @@ export default function Footer() {
           <nav className="footer-col" aria-label="Legal">
             <h4>Legal</h4>
             <ul>
-              <li><Link href="/legal?tab=aviso">Aviso de Privacidad</Link></li>
-              <li><Link href="/legal?tab=terminos">Términos de Uso</Link></li>
+              <li><Link href="/legal?tab=terminos">Términos y Condiciones</Link></li>
+              <li><Link href="/legal?tab=privacidad">Política de Privacidad</Link></li>
             </ul>
           </nav>
         </div>
 
         <div className="footer-bottom">
-          <span>© 2025 <span className="footer-gradient">MiComanda</span> — Todos los derechos reservados</span>
+          <span>© 2026 <span className="footer-gradient">MiComanda</span> — Todos los derechos reservados</span>
         </div>
       </div>
     </footer>

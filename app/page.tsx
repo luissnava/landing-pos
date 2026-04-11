@@ -10,7 +10,7 @@ export default function Home() {
       <Plans data={landingData.plans} whatsappNumber={landingData.hero.whatsappNumber} />
       <Contact data={landingData.contact} />
       <Benefits />
-      <FAQ whatsappNumber={landingData.hero.whatsappNumber} />
+      <FAQ />
       <WhatsAppButton phoneNumber={landingData.hero.whatsappNumber} />
       <Footer />
     </main>

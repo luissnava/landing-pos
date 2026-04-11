@@ -9,7 +9,7 @@ const faqs = [
   { q: '¿Tienen soporte en México?', a: 'Nuestro equipo de soporte está en México. Atención por chat, de Lunes a Viernes de 9:00 am a 6:00 pm' },
 ];
 
-export default function FAQ({ whatsappNumber }: { whatsappNumber: string }) {
+export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -20,8 +20,6 @@ export default function FAQ({ whatsappNumber }: { whatsappNumber: string }) {
     ref.current?.querySelectorAll('.rv,.rr').forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
-  const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hola, me interesa conocer más sobre el sistema POS')}`;
 
   return (
     <section className="faq-s" id="faq" ref={ref} aria-labelledby="faq-heading">
@@ -40,12 +38,13 @@ export default function FAQ({ whatsappNumber }: { whatsappNumber: string }) {
               </div>
             ))}
           </div>
+
           <div>
             <div className="faq-aside rr">
-              <p className="tag" style={{ marginBottom: 16 }}>¿Más preguntas?</p>
-              <h3>Hable con un<br/>especialista</h3>
-              <p>Le resolveremos todas sus dudas.</p>
-              <a href={waLink} target="_blank" className="faq-btn">Contactar por WhatsApp</a>
+              <p className="tag" style={{ marginBottom: 16 }}>Sin compromiso</p>
+              <h3>Pruebe MiComanda<br/>gratis</h3>
+              <p>Descubra cómo simplificar la operación de su restaurante.</p>
+              <a href="/#precios" className="faq-btn">Ver planes</a>
             </div>
           </div>
         </div>

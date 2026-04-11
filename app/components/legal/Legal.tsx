@@ -7,8 +7,7 @@ import './styles.css';
 
 // ─── Datos configurables ──────────────────────────────────────────────────────
 const CONFIG = {
-  nombre: "[TU NOMBRE COMPLETO]",
-  rfc: "[RFC PERSONA FÍSICA]",
+  nombre: "[RAZÓN SOCIAL]",
   domicilio: "[DOMICILIO FISCAL]",
   email: "contacto@gruponava.org",
   telefono: "[TELÉFONO]",
@@ -111,12 +110,13 @@ function TerminosPage() {
     { id: "ambito", label: "2. Ámbito de aplicación" },
     { id: "acceso", label: "3. Acceso y uso" },
     { id: "precios", label: "4. Precio y facturación" },
-    { id: "disponibilidad", label: "5. Disponibilidad y soporte" },
-    { id: "propiedad", label: "6. Propiedad intelectual" },
-    { id: "responsabilidad", label: "7. Limitación de responsabilidad" },
-    { id: "vigencia", label: "8. Vigencia y terminación" },
-    { id: "modificaciones", label: "9. Modificaciones" },
-    { id: "legislacion", label: "10. Legislación aplicable" },
+    { id: "devoluciones", label: "5. Política de no devoluciones" },
+    { id: "disponibilidad", label: "6. Disponibilidad y soporte" },
+    { id: "propiedad", label: "7. Propiedad intelectual" },
+    { id: "responsabilidad", label: "8. Limitación de responsabilidad" },
+    { id: "vigencia", label: "9. Vigencia y terminación" },
+    { id: "modificaciones", label: "10. Modificaciones" },
+    { id: "legislacion", label: "11. Legislación aplicable" },
   ];
 
   return (
@@ -139,12 +139,12 @@ function TerminosPage() {
       <Prose>
         Los presentes Términos regulan el acceso y uso de{" "}
         <Strong>{CONFIG.servicio}</Strong>, servicio de software digital desarrollado y
-        operado por <Strong>{CONFIG.nombre}</Strong>, persona física con actividad empresarial
+        operado por <Strong>{CONFIG.nombre}</Strong>,
         (en adelante, <Strong>{"el Proveedor"}</Strong>).
       </Prose>
       <BulletList
         items={[
-          `Proveedor: ${CONFIG.nombre}, RFC ${CONFIG.rfc}, persona física con actividad empresarial.`,
+          `Proveedor: ${CONFIG.nombre}`,
           "Usuario B2B: Persona física o moral que contrata el servicio para operar su propio negocio.",
           "Usuario B2C / Consumidor Final: Persona que interactúa con el servicio como destinatario final.",
           `Servicio: ${CONFIG.servicio}, plataforma de software digital accesible vía web y/o aplicación.`,
@@ -185,20 +185,38 @@ function TerminosPage() {
         comisiones y cualquier cargo adicional. El Proveedor emitirá CFDI por cada operación{" "}
         (Art. 12 LFPC).
       </Prose>
+
       <Prose>
-        Los cargos a tarjeta no se efectuarán antes de activar el servicio, salvo consentimiento
-        expreso del usuario (<Strong>Art. 15 LFPC</Strong>). No se incrementarán precios
-        injustificadamente por contingencias (Art. 10 BIS LFPC).
+        No se incrementarán precios injustificadamente por contingencias (Art. 10 BIS LFPC).
       </Prose>
 
-      <SectionTitle id="disponibilidad">5. Disponibilidad y soporte</SectionTitle>
+      <SectionTitle id="devoluciones">5. Política de No Devoluciones</SectionTitle>
+      <AlertBox>
+        Una vez adquirido cualquiera de nuestros planes, no se realizarán devoluciones
+        ni reembolsos de ningún tipo, dado que el acceso al servicio se activa de forma
+        inmediata al momento del pago.
+      </AlertBox>
+      <Prose>
+        Al completar la compra, el usuario reconoce y acepta que ha revisado las
+        características del plan seleccionado y que el pago realizado es{" "}
+        <Strong>definitivo e irrevocable</Strong>. El acceso al servicio se activa de forma
+        inmediata tras la confirmación del pago.
+      </Prose>
+      <Prose>
+        Al completar tu compra, el usuario confirma haber leído y aceptado estos términos.
+        Te recomendamos revisar las características de cada plan antes de realizar
+        tu adquisición. Si tienes dudas, nuestro equipo de soporte está disponible
+        para orientarte.
+      </Prose>
+
+      <SectionTitle id="disponibilidad">6. Disponibilidad y soporte</SectionTitle>
       <Prose>
         El Proveedor realizará sus mejores esfuerzos para mantener el servicio disponible de forma
-        continua. El soporte técnico se atenderá personalmente a través de{" "}
-        <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a> y {CONFIG.telefono}.
+        continua. El soporte técnico se atenderá a través de{" "}
+        <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>
       </Prose>
 
-      <SectionTitle id="propiedad">6. Propiedad intelectual</SectionTitle>
+      <SectionTitle id="propiedad">7. Propiedad intelectual</SectionTitle>
       <Prose>
         El software, diseño, código, interfaces, documentación y cualquier otro elemento de{" "}
         <Strong>{CONFIG.servicio}</Strong> son propiedad intelectual exclusiva del Proveedor.
@@ -207,7 +225,7 @@ function TerminosPage() {
         la vigencia de su suscripción.
       </Prose>
 
-      <SectionTitle id="responsabilidad">7. Limitación de responsabilidad</SectionTitle>
+      <SectionTitle id="responsabilidad">8. Limitación de responsabilidad</SectionTitle>
       <AlertBox>
         IMPORTANTE: Las limitaciones de responsabilidad no aplican en casos de dolo, mala fe o
         negligencia grave del Proveedor, ni en los supuestos previstos por la LFPC en beneficio
@@ -221,7 +239,7 @@ function TerminosPage() {
         ]}
       />
 
-      <SectionTitle id="vigencia">8. Vigencia y terminación</SectionTitle>
+      <SectionTitle id="vigencia">9. Vigencia y terminación</SectionTitle>
       <Prose>
         Estos términos están vigentes mientras el usuario mantenga acceso al servicio. El Proveedor
         puede suspender el acceso por incumplimiento, falta de pago o uso ilícito, con aviso
@@ -229,14 +247,14 @@ function TerminosPage() {
         en la gestión y atención de cualquier incidencia.
       </Prose>
 
-      <SectionTitle id="modificaciones">9. Modificaciones</SectionTitle>
+      <SectionTitle id="modificaciones">10. Modificaciones</SectionTitle>
       <Prose>
         El Proveedor puede modificar estos términos con al menos{" "}
         <Strong>30 días de anticipación</Strong>, notificando por correo o aviso en la plataforma.
         El uso continuado implica aceptación.
       </Prose>
 
-      <SectionTitle id="legislacion">10. Legislación aplicable</SectionTitle>
+      <SectionTitle id="legislacion">11. Legislación aplicable</SectionTitle>
       <BulletList
         items={[
           "Ley Federal de Protección al Consumidor (LFPC) — Reforma DOF 12-12-2025.",
@@ -245,27 +263,6 @@ function TerminosPage() {
           "Legislación fiscal vigente (CFF, LIVA, LISR).",
         ]}
       />
-      <Prose>
-        Para controversias, las partes se someten a la jurisdicción de los tribunales en el
-        domicilio del Proveedor, sin perjuicio del derecho del consumidor de acudir a la{" "}
-        <Strong>PROFECO</Strong>.
-      </Prose>
-
-      {/* <SectionTitle>Contacto</SectionTitle>
-      <div className="legal-info-rows">
-        <InfoRow label="Proveedor" value={CONFIG.nombre} />
-        <InfoRow label="RFC" value={CONFIG.rfc} />
-        <InfoRow label="Domicilio" value={CONFIG.domicilio} />
-        <InfoRow label="Email" value={CONFIG.email} />
-        <InfoRow label="Teléfono" value={CONFIG.telefono} />
-        <InfoRow label="Sitio web" value={CONFIG.sitio} />
-      </div> */}
-{/* 
-      <FooterNote>
-        También puede presentar quejas ante la{" "}
-        <a href="https://www.profeco.gob.mx" target="_blank" rel="noreferrer">PROFECO</a>
-        {" "}· Tel. 800 468 8722
-      </FooterNote> */}
     </>
   );
 }
@@ -285,18 +282,12 @@ function PrivacidadPage() {
         usuarios B2B y consumidores finales, conforme a la LFPDPPP y la LFPC (reforma DOF 12-12-2025).
       </AlertBox>
 
-      <SectionTitle>1. Responsable del tratamiento</SectionTitle>
-      <Prose>
-        <Strong>{CONFIG.nombre}</Strong>, persona física con actividad empresarial, con domicilio en {CONFIG.domicilio}, RFC {CONFIG.rfc}.
-        Contacto: <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>.
-      </Prose>
-
       <SectionTitle>2. Datos que recopilamos</SectionTitle>
       <SubLabel>Clientes B2B</SubLabel>
       <BulletList
         items={[
           "Identificación: nombre, RFC, razón social.",
-          "Contacto: correo electrónico, teléfono, domicilio fiscal.",
+          "Contacto: correo electrónico, teléfono",
           "Operación: historial de transacciones, ventas, inventario.",
           "Financieros: método de pago e historial de facturación del servicio contratado.",
         ]}
@@ -362,182 +353,12 @@ function PrivacidadPage() {
         ]}
       />
 
-      <SectionTitle>6. Derechos ARCO</SectionTitle>
-      <Prose>
-        Puede ejercer sus derechos de{" "}
-        <Strong>Acceso, Rectificación, Cancelación y Oposición</Strong> enviando solicitud a{" "}
-        <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>{" "}
-        con identificación oficial. Responderemos en <Strong>20 días hábiles</Strong>.
-      </Prose>
-
-      <SectionTitle>7. Cambios a esta política</SectionTitle>
+      <SectionTitle>6. Cambios a esta política</SectionTitle>
       <Prose>
         Cualquier modificación será notificada por correo con al menos{" "}
         <Strong>15 días de anticipación</Strong>. La versión vigente siempre está disponible
         en {CONFIG.sitio}.
       </Prose>
-
-      <FooterNote>
-        Derechos ARCO:{" "}
-        <a href="https://www.inai.org.mx" target="_blank" rel="noreferrer">INAI</a>
-        {" "}· 800 835 4324 · atencionalciudadano@inai.org.mx
-        <br />
-        Quejas como consumidor:{" "}
-        <a href="https://www.profeco.gob.mx" target="_blank" rel="noreferrer">PROFECO</a>
-        {" "}· 800 468 8722
-      </FooterNote>
-    </>
-  );
-}
-
-// ─── PÁGINA: Aviso de Privacidad LFPDPPP ─────────────────────────────────────
-function AvisoPage() {
-  const transferencias = [
-    ["Autoridades fiscales (SAT)", "Cumplimiento fiscal", "No requerido"],
-    ["Procesadores de pago PCI-DSS", "Procesamiento de cobros", "No requerido"],
-    ["Proveedores cloud", "Hospedaje del sistema", "No requerido"],
-  ];
-
-  return (
-    <>
-      <PageHeader
-        badge="Documento legal · LFPDPPP"
-        title="Aviso de Privacidad Integral"
-        subtitle={`Última actualización: ${CONFIG.fecha} · ${CONFIG.nombre}`}
-      />
-
-      <AlertBox>
-        Emitido en cumplimiento de los Artículos 15 y 16 de la Ley Federal de Protección de Datos
-        Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento.
-      </AlertBox>
-
-      <SectionTitle>I. Identidad y domicilio del responsable</SectionTitle>
-      <div className="legal-info-rows">
-        <InfoRow label="Responsable" value={`${CONFIG.nombre} (Persona física)`} />
-        <InfoRow label="RFC" value={CONFIG.rfc} />
-        <InfoRow label="Domicilio" value={CONFIG.domicilio} />
-        <InfoRow label="Contacto" value={CONFIG.email} />
-        <InfoRow label="Teléfono" value={CONFIG.telefono} />
-      </div>
-
-      <SectionTitle>II. Datos personales que tratamos</SectionTitle>
-      <SubLabel>Clientes B2B</SubLabel>
-      <BulletList
-        items={[
-          "Identificación: nombre, RFC, CURP (cuando aplique), razón social.",
-          "Contacto: correo, teléfono, domicilio fiscal y/o comercial.",
-          "Patrimoniales: información bancaria, historial de pagos, facturación.",
-          "Operación: transacciones procesadas, configuración del sistema.",
-        ]}
-      />
-      <SubLabel>Consumidores finales (B2C)</SubLabel>
-      <BulletList
-        items={[
-          "Identificación fiscal: nombre y RFC únicamente si el consumidor solicita CFDI.",
-          "Transacción: fecha, hora, monto, descripción de productos adquiridos.",
-        ]}
-      />
-      <AlertBox>
-        No recabamos datos sensibles ni datos de tarjetas directamente. Los pagos son procesados
-        por gateways certificados PCI-DSS.
-      </AlertBox>
-
-      <SectionTitle>III. Finalidades del tratamiento</SectionTitle>
-      <SubLabel>Primarias — necesarias para la relación jurídica</SubLabel>
-      <NumberedList
-        items={[
-          "Identificación y autenticación en el sistema.",
-          "Prestación del servicio POS contratado.",
-          "Facturación, cobros y gestión de pagos.",
-          "Generación de CFDI.",
-          "Soporte técnico y atención de garantías.",
-          "Cumplimiento de obligaciones legales y fiscales.",
-          "Auditoría y control interno.",
-        ]}
-      />
-      <SubLabel>Secundarias — opcionales, puede oponerse</SubLabel>
-      <NumberedList
-        items={[
-          "Envío de comunicaciones comerciales sobre el sistema y productos relacionados.",
-          "Análisis estadístico agregado para mejora de productos.",
-          "Invitaciones a eventos, webinars o actualizaciones.",
-        ]}
-      />
-      <Prose>
-        Para oponerse, escríbanos a{" "}
-        <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>{" "}
-        dentro de los <Strong>5 días hábiles</Strong> siguientes.
-      </Prose>
-
-      <SectionTitle>IV. Transferencias de datos</SectionTitle>
-      <div className="legal-table-wrap">
-        <table className="legal-table">
-          <thead>
-            <tr>
-              <th>Receptor</th>
-              <th>Finalidad</th>
-              <th>Consentimiento</th>
-            </tr>
-          </thead>
-          <tbody>
-            {transferencias.map(([r, f, c], i) => (
-              <tr key={i}>
-                <td>{r}</td>
-                <td>{f}</td>
-                <td className={c === "Sí, previo" ? "legal-consent-yes" : ""}>{c}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <SectionTitle>V. Derechos ARCO</SectionTitle>
-      <Prose>
-        Para ejercer sus derechos de{" "}
-        <Strong>Acceso, Rectificación, Cancelación u Oposición</Strong>, envíe solicitud a{" "}
-        <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a> con:
-      </Prose>
-      <NumberedList
-        items={[
-          "Nombre completo y datos de contacto.",
-          "Copia de identificación oficial.",
-          "Descripción del derecho que desea ejercer y los datos involucrados.",
-        ]}
-      />
-      <Prose>
-        Responderemos en un plazo máximo de <Strong>20 días hábiles</Strong>.
-      </Prose>
-
-      <SectionTitle>VI. Revocación del consentimiento</SectionTitle>
-      <Prose>
-        Puede revocar el consentimiento en cualquier momento escribiendo a{" "}
-        <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>.
-        La revocación no tiene efectos retroactivos.
-      </Prose>
-
-      <SectionTitle>VII. Limitación de uso y divulgación</SectionTitle>
-      <Prose>
-        Puede inscribirse en el{" "}
-        <Strong>Registro Público para Evitar Publicidad (REPEP)</Strong> de la PROFECO en{" "}
-        <a href="https://www.profeco.gob.mx" target="_blank" rel="noreferrer">www.profeco.gob.mx</a>,
-        o manifestarnos directamente su voluntad de no recibir comunicaciones comerciales.
-      </Prose>
-
-      <SectionTitle>VIII. Cambios al aviso</SectionTitle>
-      <Prose>
-        Modificaciones serán notificadas por correo o publicadas en {CONFIG.sitio} con al menos{" "}
-        <Strong>15 días de anticipación</Strong>.
-      </Prose>
-
-      <FooterNote>
-        Autoridad supervisora:{" "}
-        <a href="https://www.inai.org.mx" target="_blank" rel="noreferrer">INAI</a>
-        {" "}· www.inai.org.mx · 800 835 4324 · atencionalciudadano@inai.org.mx
-        <br />
-        Quejas como consumidor:{" "}
-        <a href="https://www.profeco.gob.mx" target="_blank" rel="noreferrer">PROFECO</a>
-        {" "}· www.profeco.gob.mx · 800 468 8722
-      </FooterNote>
     </>
   );
 }
@@ -546,7 +367,6 @@ function AvisoPage() {
 const TABS = [
   { id: "terminos", label: "Términos y condiciones", component: TerminosPage },
   { id: "privacidad", label: "Política de privacidad", component: PrivacidadPage },
-  { id: "aviso", label: "Aviso de privacidad", component: AvisoPage },
 ];
 
 // ─── COMPONENTE PRINCIPAL ─────────────────────────────────────────────────────
@@ -581,10 +401,6 @@ export default function LegalPages() {
       <main className="legal-content">
         <ActivePage />
       </main>
-
-      {/* <footer className="legal-page-footer">
-        © {new Date().getFullYear()} {CONFIG.nombre} · RFC {CONFIG.rfc} · {CONFIG.domicilio}
-      </footer> */}
     </div>
   );
 }

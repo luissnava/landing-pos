@@ -20,7 +20,7 @@ export default function Hero({ data }: HeroProps) {
           <span className="hero-eyebrow-line" />
         </div>
         <h1 className="hero-h1">
-          El punto de venta que<br /><em>su restaurante merece</em>
+          El sistema POS que<br /><em>su restaurante merece</em>
         </h1>
         <p className="hero-p">{data.subtitle}</p>
         <div className="hero-btns">
@@ -28,17 +28,7 @@ export default function Hero({ data }: HeroProps) {
           <a href="#precios" className="btn-secondary">Ver planes</a>
         </div>
         <div className="hero-metrics">
-          {/* {[['4,200','+','Restaurantes activos'],['98','%','Satisfacción de clientes'],['60','min','Tiempo de configuración']].map(([v,s,l])=>(
-            <div key={l}>
-              <div className="metric-val">{v}<sup>{s}</sup></div>
-              <div className="metric-label">{l}</div>
-            </div>
-          ))} */}
         </div>
-      </div>
-      <div className="hero-scroll">
-        {/* <div className="scroll-box"><div className="scroll-pill" /></div> */}
-        <span className="scroll-hint">Descubrir</span>
       </div>
     </header>
   );
