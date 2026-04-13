@@ -3,6 +3,8 @@
 import { useState, type ReactNode } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
+import logo from '@/app/assets/images/logo.svg';
 import './styles.css';
 
 // ─── Datos configurables ──────────────────────────────────────────────────────
@@ -382,7 +384,7 @@ export default function LegalPages() {
     <div className="legal-page">
       <nav className="legal-nav">
         <Link href="/" className="legal-nav-logo">
-          <div className="legal-logo-mark">MC</div>
+          <Image src={logo} alt="MiComanda" width={32} height={32} className="legal-logo-mark" />
           MiComanda
         </Link>
         <div className="legal-nav-links">

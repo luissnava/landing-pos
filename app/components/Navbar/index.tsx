@@ -1,6 +1,8 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import logo from '@/app/assets/images/logo.svg';
 import './styles.css';
 
 export default function Navbar() {
@@ -15,8 +17,8 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} aria-label="Principal">
       <Link href="#" className="nav-logo">
-        <div className="logo-mark">MC</div>
-        MiComanda
+        <Image src={logo} alt="MiComanda" width={42} />
+        MiComandaPOS
       </Link>
       <ul className="nav-links">
         <li><Link href="#funciones">Funciones</Link></li>

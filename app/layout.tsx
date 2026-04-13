@@ -19,22 +19,22 @@ export const metadata: Metadata = {
     "sistema restaurante México", "control de mesas", "cocina digital",
     "software punto de venta", "POS en español", "sistema comandas",
   ],
-  authors: [{ name: "MiComanda" }],
+  authors: [{ name: "MiComandaPOS" }],
   openGraph: {
-    title: "MiComanda — Sistema POS para Restaurantes",
+    title: "MiComandaPOS — Sistema POS para Restaurantes",
     description: "Gestiona mesas, comandas, tickets y reportes de tu restaurante desde cualquier dispositivo. Soporte en español.",
     type: "website",
     locale: "es_MX",
-    siteName: "MiComanda",
+    siteName: "MiComandaPOS",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MiComanda — POS para Restaurantes",
+    title: "MiComandaPOS — POS para Restaurantes",
     description: "Sistema punto de venta con comandas digitales, gestión de mesas y reportes. Funciona en tablet, smartphone y PC.",
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://systempos.gruponava.org" },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({

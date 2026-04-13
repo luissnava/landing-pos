@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '@/app/assets/images/logo.svg';
 import './styles.css';
 
 export default function Footer() {
@@ -8,8 +10,8 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link href="/" className="footer-logo">
-              <div className="footer-logo-mark">MC</div>
-              MiComanda
+              <Image src={logo} alt="MiComanda" width={72} />
+              MiComandaPOS
             </Link>
             <p className="footer-desc">Sistema POS para restaurantes. Gestione mesas, comandas y ventas desde un solo lugar.</p>
           </div>
@@ -44,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 <span className="footer-gradient">MiComanda</span> — Todos los derechos reservados</span>
+          <span>© 2026 <span className="footer-gradient">MiComandaPOS</span> — Todos los derechos reservados</span>
         </div>
       </div>
     </footer>
