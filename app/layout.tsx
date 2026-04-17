@@ -23,14 +23,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MiComandaPOS — Sistema POS para Restaurantes",
     description: "Gestiona mesas, comandas, tickets y reportes de tu restaurante desde cualquier dispositivo. Soporte en español.",
+    url: "https://micomandapos.gruponava.org/",
     type: "website",
     locale: "es_MX",
     siteName: "MiComandaPOS",
+    images: [{ url: "https://micomandapos.gruponava.org/og.png", width: 1200, height: 630, alt: "MiComandaPOS — Sistema POS para Restaurantes" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "MiComandaPOS — POS para Restaurantes",
     description: "Sistema punto de venta con comandas digitales, gestión de mesas y reportes. Funciona en tablet, smartphone y PC.",
+    images: ["https://micomandapos.gruponava.org/og.png"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://micomandapos.gruponava.org/" },
