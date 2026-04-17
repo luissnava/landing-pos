@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://systempos.gruponava.org";
+const BASE = "https://micomandapos.gruponava.org/";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
