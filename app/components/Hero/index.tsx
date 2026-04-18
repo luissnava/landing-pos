@@ -6,7 +6,6 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
-  const waLink = `https://wa.me/${data.whatsappNumber}?text=${encodeURIComponent('Hola, me interesa conocer más sobre el sistema POS para restaurantes')}`;
   return (
     <header className="hero" role="banner">
       <div className="hero-bg" />
