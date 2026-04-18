@@ -15,9 +15,7 @@ export default function Contact({ data }: ContactProps) {
     ref.current?.querySelectorAll('.rv').forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
-  const waLink = `https://wa.me/${data.whatsappNumber}?text=${encodeURIComponent(data.whatsappMessage)}`;
-
+  
   return (
     <section className="pb" ref={ref} aria-labelledby="cta-heading">
       <div className="pb-bg" />
