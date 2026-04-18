@@ -28,7 +28,6 @@ export default function Contact({ data }: ContactProps) {
         <p className="cta-sub rv">Configuración en menos de 60 minutos.</p>
         <div className="cta-btns rv">
           <a href="#precios" className="cta-btn-primary">Comenzar ahora</a>
-          <a href={waLink} target="_blank" className="cta-btn-secondary">Contactar por WhatsApp</a>
         </div>
       </div>
     </section>

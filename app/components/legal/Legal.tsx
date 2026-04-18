@@ -9,7 +9,7 @@ import './styles.css';
 
 // ─── Datos configurables ──────────────────────────────────────────────────────
 const CONFIG = {
-  nombre: "[RAZÓN SOCIAL]",
+  nombre: "Grupo Nava",
   domicilio: "[DOMICILIO FISCAL]",
   email: "contacto@gruponava.org",
   telefono: "[TELÉFONO]",
@@ -288,7 +288,7 @@ function PrivacidadPage() {
       <SubLabel>Clientes B2B</SubLabel>
       <BulletList
         items={[
-          "Identificación: nombre, RFC, razón social.",
+          "Identificación: nombre completo",
           "Contacto: correo electrónico, teléfono",
           "Operación: historial de transacciones, ventas, inventario.",
           "Financieros: método de pago e historial de facturación del servicio contratado.",

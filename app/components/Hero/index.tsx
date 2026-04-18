@@ -24,10 +24,7 @@ export default function Hero({ data }: HeroProps) {
         </h1>
         <p className="hero-p">{data.subtitle}</p>
         <div className="hero-btns">
-          <a href={waLink} target="_blank" className="btn-primary">Contactar por WhatsApp</a>
           <a href="#precios" className="btn-secondary">Ver planes</a>
-        </div>
-        <div className="hero-metrics">
         </div>
       </div>
     </header>

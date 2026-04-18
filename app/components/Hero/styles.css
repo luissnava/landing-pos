@@ -56,6 +56,7 @@
   animation: up .7s .65s forwards;
 }
 .hero-btns {
+  margin-bottom: 20px;
   display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
   opacity: 0; transform: translateY(12px);
   animation: up .7s .85s forwards;

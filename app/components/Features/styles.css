@@ -1,4 +1,4 @@
-.feat-s { background: var(--ink2); padding: 120px 72px; }
+.feat-s { background: var(--ink2); padding: 50px 72px; }
 .feat-head {
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
   align-items: end; margin-bottom: 72px;
