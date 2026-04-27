@@ -12,10 +12,10 @@ const CONFIG = {
   nombre: "Grupo Nava",
   domicilio: "[DOMICILIO FISCAL]",
   email: "contacto@gruponava.org",
-  telefono: "[TELÉFONO]",
+  telefono: "5511421531",
   sitio: "micomanda.gruponava.org",
-  servicio: "MiComanda",
-  fecha: "10 de abril de 2026",
+  servicio: "MiComandaPOS",
+  fecha: "26 de abril de 2026",
 };
 
 // ─── Componentes base ─────────────────────────────────────────────────────────
@@ -384,8 +384,8 @@ export default function LegalPages() {
     <div className="legal-page">
       <nav className="legal-nav">
         <Link href="/" className="legal-nav-logo">
-          <Image src={logo} alt="MiComanda" width={32} height={32} className="legal-logo-mark" />
-          MiComanda
+          <Image src={logo} alt="MiComandaPOS" width={32} height={32} className="legal-logo-mark" />
+          MiComandaPOS
         </Link>
         <div className="legal-nav-links">
           {TABS.map((tab) => (
