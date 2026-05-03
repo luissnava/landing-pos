@@ -1,6 +1,6 @@
 # 🍽️ MiComanda — Sistema POS para Restaurantes
 
-Landing page y sistema de membresías para **MiComanda**, un punto de venta diseñado para restaurantes.
+Landing page y sistema de membresías para **MiComandaPOS**, un punto de venta diseñado para restaurantes.
 
 🔗 [systempos.gruponava.org](https://systempos.gruponava.org)
 
@@ -46,30 +46,3 @@ npm run dev
 ```
 
 Abrir [http://localhost:3000](http://localhost:3000)
-
-## Scripts
-
-| Comando | Descripción |
-|---|---|
-| `npm run dev` | Servidor de desarrollo |
-| `npm run build` | Build de producción |
-| `npm run start` | Servidor de producción |
-| `npm run lint` | Linter ESLint |
-
-## Roadmap
-
-### Primera Etapa
-- [x] Subir landing page
-- [x] Hacer pruebas de landing
-- [x] Hacer el módulo de Jurídico
-- [ ] Hacer pruebas de pago con Stripe en prod
-- [x] Hacer el correo empresarial
-- [ ] Abrir cuentas de redes sociales (Instagram, TikTok)
-- [ ] Subir promociones del sistema
-
-### Segunda Etapa
-- [ ] Optimizar versión estable para integrar comanda y mejorar frontend de proxy a actions servers
-- [ ] Crear módulo de AdminPanel para superUser (root y sudo)
-
-### Facturación
-- [ ] Levantar proyectos para facturación
