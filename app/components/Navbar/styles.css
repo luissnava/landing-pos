@@ -49,4 +49,5 @@ nav.navbar.scrolled {
   nav.navbar.scrolled { padding: 12px 24px; }
   .nav-links { display: none; }
   .btn-ng { display: none; }
+  .btn-nc { display: none; }
 }
