@@ -58,15 +58,6 @@ function AlertBox({ children }: { children: ReactNode }) {
   return <p className="legal-alert">{children}</p>;
 }
 
-function InfoRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="legal-info-row">
-      <span className="legal-info-label">{label}</span>
-      <span className="legal-info-value">{value}</span>
-    </div>
-  );
-}
-
 function TableOfContents({ items }: { items: { id: string; label: string }[] }) {
   return (
     <div className="legal-toc">
@@ -91,10 +82,6 @@ function PageHeader({ badge, title, subtitle }: { badge: string; title: string; 
       <p className="legal-page-subtitle">{subtitle}</p>
     </div>
   );
-}
-
-function FooterNote({ children }: { children: ReactNode }) {
-  return <div className="legal-footer-note">{children}</div>;
 }
 
 function Strong({ children }: { children: ReactNode }) {
