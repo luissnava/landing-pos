@@ -1,5 +1,4 @@
 'use server';
-
 export async function submitData(formData: {
   planId: string;
   plan: string;
@@ -33,10 +32,6 @@ export async function submitData(formData: {
     ...(formData.businessName && { legal_name: formData.businessName })
   };
 
-  console.log("payload", payload);
-
-
-
   try {
     const response = await fetch(process.env.BACKEND_URL, {
       method: 'POST',
@@ -56,31 +51,7 @@ export async function submitData(formData: {
 
     return { success: true, data };
   } catch (error) {
-    console.log(error);
-    
+    console.error(error);
     return { success: false, message: 'Error de conexión. Intente de nuevo.' };
   }
 }
-
-// export async function notifyPaymentSuccess(sessionId: string) {
-//   try {
-//     const response = await fetch(process.env.WEBHOOK_URL!, {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify({
-//         type: 'checkout.session.completed',
-//         data: { object: { id: sessionId } }
-//       })
-//     });
-
-//     if (!response.ok) console.log(response);
-
-//     const data = await response.json()
-
-//     console.log(data);
-
-//     return { success: true };
-//   } catch (error) {
-//     return { success: false, error };
-//   }
-// }
