@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MiComanda — Sistema POS para Restaurantes",
+  title: "MiComanda, Sistema POS para Restaurantes",
   description: "MiComanda: Sistema POS para restaurantes. Gestiona mesas, comandas digitales, tickets de venta, menú digital y reportes por periodo. Funciona en tablet, iPad, smartphone y PC. Soporte en español.",
   keywords: [
     "MiComanda", "Comanda", "comanda", "POS restaurante", "Sistema POS", "POS", "gestión restaurante",
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "MiComandaPOS" }],
   openGraph: {
-    title: "MiComandaPOS — Sistema POS para Restaurantes",
+    title: "MiComandaPOS, Sistema POS para Restaurantes",
     description: "Gestiona mesas, comandas, tickets y reportes de tu restaurante desde cualquier dispositivo. Soporte en español.",
     url: "https://micomandapos.gruponava.org/",
     type: "website",
     locale: "es_MX",
     siteName: "MiComandaPOS",
-    images: [{ url: "https://micomandapos.gruponava.org/og.png", width: 1200, height: 630, alt: "MiComandaPOS — Sistema POS para Restaurantes" }],
+    images: [{ url: "https://micomandapos.gruponava.org/og.png", width: 1200, height: 630, alt: "MiComandaPOS, Sistema POS para Restaurantes" }],
   },
   twitter: {
     card: "summary_large_image",
