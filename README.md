@@ -1,4 +1,4 @@
-# 🍽️ MiComanda — Sistema POS para Restaurantes
+# 🍽️ MiComanda, Sistema POS para Restaurantes
 
 Landing page y sistema de membresías para **MiComandaPOS**, un punto de venta diseñado para restaurantes.
 

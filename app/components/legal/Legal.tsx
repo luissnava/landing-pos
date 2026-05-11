@@ -33,7 +33,7 @@ function BulletList({ items }: { items: string[] }) {
     <ul className="legal-bullets">
       {items.map((item, i) => (
         <li key={i}>
-          <span className="legal-bullet-mark">—</span>
+          <span className="legal-bullet-mark">{"—"}</span>
           <span>{item}</span>
         </li>
       ))}
@@ -126,7 +126,7 @@ function TerminosPage() {
       <PageHeader
         badge="Documento legal"
         title="Términos y Condiciones de Uso"
-        subtitle={`Última actualización: ${CONFIG.fecha} · ${CONFIG.servicio} — ${CONFIG.nombre}`}
+        subtitle={`Última actualización: ${CONFIG.fecha} · ${CONFIG.servicio} ${","} ${CONFIG.nombre}`}
       />
 
       <AlertBox>
@@ -259,7 +259,7 @@ function TerminosPage() {
       <SectionTitle id="legislacion">11. Legislación aplicable</SectionTitle>
       <BulletList
         items={[
-          "Ley Federal de Protección al Consumidor (LFPC) — Reforma DOF 12-12-2025.",
+          "Ley Federal de Protección al Consumidor (LFPC), Reforma DOF 12-12-2025.",
           "Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).",
           "Código Civil Federal y Código de Comercio.",
           "Legislación fiscal vigente (CFF, LIVA, LISR).",
@@ -299,7 +299,7 @@ function PrivacidadPage() {
         items={[
           "Datos de transacción: fecha, hora, monto, productos adquiridos.",
           "Fiscales: nombre y RFC únicamente si el consumidor solicita CFDI.",
-          "No recopilamos datos de tarjetas directamente — son procesados por gateways certificados PCI-DSS.",
+          "No recopilamos datos de tarjetas directamente, son procesados por gateways certificados PCI-DSS.",
         ]}
       />
       <AlertBox>
@@ -308,7 +308,7 @@ function PrivacidadPage() {
       </AlertBox>
 
       <SectionTitle>3. Finalidades del tratamiento</SectionTitle>
-      <SubLabel>Primarias — necesarias</SubLabel>
+      <SubLabel>Primarias, necesarias</SubLabel>
       <NumberedList
         items={[
           "Proveer y operar el Sistema POS contratado.",
@@ -318,7 +318,7 @@ function PrivacidadPage() {
           "Generación de reportes de ventas e inventario.",
         ]}
       />
-      <SubLabel>Secundarias — opcionales, puede oponerse</SubLabel>
+      <SubLabel>Secundarias opcionales, puede oponerse</SubLabel>
       <NumberedList
         items={[
           "Envío de comunicaciones comerciales y promociones.",
