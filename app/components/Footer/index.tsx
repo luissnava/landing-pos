@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 <span className="footer-gradient">MiComandaPOS</span>Todos los derechos reservados</span>
+          <span>© 2026 <span className="footer-gradient">MiComandaPOS </span> Todos los derechos reservados</span>
         </div>
       </div>
     </footer>

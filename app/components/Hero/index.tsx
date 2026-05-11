@@ -18,9 +18,9 @@ export default function Hero({ data }: HeroProps) {
           Sistema POS · Gestión Total
           <span className="hero-eyebrow-line" />
         </div>
-        <h1 className="hero-h1">
+        {/* <h1 className="hero-h1">
           El sistema POS que<br /><em>tu restaurante merece</em>
-        </h1>
+        </h1> */}
         <p className="hero-p">{data.subtitle}</p>
         <div className="hero-btns">
           <a href="#precios" className="btn-secondary">Ver planes</a>
